@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&display=swap');
+
+:root {
+    --bg-primary: #0b0d10;
+    --bg-secondary: #11151a;
+    --bg-elevated: #171c22;
+
+    --text-primary: #f5f7fa;
+    --text-secondary: #a7b0ba;
+
+    --border-color: #262d35;
+
+    --accent: #4f8cff;
+    --accent-hover: #72a4ff;
+}
+
+
+.site-header {
+    width: 100%;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+
+    background: rgba(11, 13, 16, 0.96);
+    backdrop-filter: blur(14px);
+
+    border-bottom: 1px solid var(--border-color);
+}
+
+
+.navbar {
+    width: 100%;
+    min-height: 76px;
+
+    padding: 0 24px;
+}
+
+
+.nav-container {
+    width: 100%;
+    max-width: 1240px;
+
+    margin: 0 auto;
+    padding: 20px 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+.nav-logo {
+    width: 115px;
+    height: auto;
+
+    display: block;
+}
+
+
+.navbar-collapse {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    flex-grow: 1;
+}
+
+
+.nav-links {
+    display: flex;
+    align-items: center;
+
+    gap: 22px;
+
+    margin-left: auto;
+}
+
+
+.nav-link {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+
+    font-family: 'Manrope', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+
+    color: var(--text-secondary) !important;
+}
+
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--text-primary) !important;
+}
+
+
+.nav-cta {
+    background: var(--accent);
+    color: #ffffff;
+
+    padding: 11px 18px;
+
+    border-radius: 9px;
+
+    font-family: 'Manrope', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+
+.nav-cta:hover {
+    background: var(--accent-hover);
+    color: #ffffff;
+}
