@@ -1,0 +1,185 @@
+.cta-section {
+    padding: 90px 24px;
+
+    background: var(--bg-primary);
+}
+
+
+.cta-container {
+    max-width: 1240px;
+
+    margin: 0 auto;
+
+    padding: 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 50px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(79, 140, 255, 0.14),
+            rgba(23, 28, 34, 0.85)
+        );
+
+    border: 1px solid var(--border-color);
+
+    border-radius: 22px;
+}
+
+
+.cta-content {
+    max-width: 680px;
+}
+
+
+.cta-eyebrow {
+    margin: 0 0 14px;
+
+    color: var(--accent);
+
+    font-family: 'Manrope', sans-serif;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.12em;
+}
+
+
+.cta-title {
+    margin: 0;
+
+    color: var(--text-primary);
+
+    font-family: 'Manrope', sans-serif;
+
+    font-size: clamp(32px, 4vw, 48px);
+
+    line-height: 1.15;
+}
+
+
+.cta-description {
+    margin: 18px 0 0;
+
+    color: var(--text-secondary);
+
+    font-family: 'Inter', sans-serif;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+}
+
+
+.cta-actions {
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+
+    flex-shrink: 0;
+}
+
+
+.cta-btn {
+    min-height: 50px;
+
+    padding: 0 20px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 12px;
+
+    border-radius: 9px;
+
+    font-family: 'Manrope', sans-serif;
+
+    font-weight: 700;
+
+    text-decoration: none;
+}
+
+
+.cta-btn-primary {
+    background: var(--accent);
+
+    color: white;
+
+    border: 1px solid var(--accent);
+}
+
+
+.cta-btn-primary:hover {
+    background: var(--accent-hover);
+
+    color: white;
+}
+
+
+.cta-btn-secondary {
+    background: transparent;
+
+    color: var(--text-primary);
+
+    border: 1px solid var(--border-color);
+}
+
+
+.cta-btn-secondary:hover {
+    background: var(--bg-elevated);
+
+    color: var(--text-primary);
+}
+
+
+@media (max-width: 900px) {
+
+    .cta-container {
+        padding: 45px;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+
+    .cta-actions {
+        width: 100%;
+    }
+
+}
+
+
+@media (max-width: 576px) {
+
+    .cta-section {
+        padding: 60px 20px;
+    }
+
+
+    .cta-container {
+        padding: 32px 24px;
+    }
+
+
+    .cta-actions {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+
+    .cta-btn {
+        width: 100%;
+    }
+
+}

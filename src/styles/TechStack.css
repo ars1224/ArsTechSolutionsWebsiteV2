@@ -1,0 +1,284 @@
+.tech-stack {
+    padding: 100px 0;
+
+    background: var(--bg-secondary);
+
+    border-top: 1px solid var(--border-color);
+
+    border-bottom: 1px solid var(--border-color);
+
+    overflow: hidden;
+}
+
+
+.tech-stack-container {
+    max-width: 1240px;
+
+    margin: 0 auto;
+
+    padding: 0 24px;
+}
+
+
+.tech-stack-heading {
+    max-width: 720px;
+
+    margin-bottom: 50px;
+}
+
+
+.tech-stack-heading > p {
+    margin: 0 0 12px;
+
+    color: var(--accent);
+
+    font-family: 'Manrope', sans-serif;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    letter-spacing: 0.12em;
+
+    text-transform: uppercase;
+}
+
+
+.tech-stack-heading h2 {
+    margin: 0;
+
+    color: var(--text-primary);
+
+    font-family: 'Manrope', sans-serif;
+
+    font-size: clamp(32px, 4vw, 48px);
+
+    line-height: 1.15;
+}
+
+
+.tech-stack-heading > span {
+    display: block;
+
+    margin-top: 18px;
+
+    color: var(--text-secondary);
+
+    font-family: 'Inter', sans-serif;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================
+   CAROUSEL
+========================= */
+
+.tech-carousel {
+    width: 100%;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+/* fade left and right edges */
+.tech-carousel::before,
+.tech-carousel::after {
+    content: "";
+
+    width: 120px;
+    height: 100%;
+
+    position: absolute;
+
+    top: 0;
+
+    z-index: 2;
+
+    pointer-events: none;
+}
+
+
+.tech-carousel::before {
+    left: 0;
+
+    background: linear-gradient(
+        to right,
+        var(--bg-secondary),
+        transparent
+    );
+}
+
+
+.tech-carousel::after {
+    right: 0;
+
+    background: linear-gradient(
+        to left,
+        var(--bg-secondary),
+        transparent
+    );
+}
+
+
+/* Moving row */
+.tech-carousel-track {
+    width: max-content;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    animation: tech-scroll 60s linear infinite;
+}
+
+
+/* pause when mouse is over carousel */
+.tech-carousel:hover .tech-carousel-track {
+    animation-play-state: paused;
+}
+
+
+/* =========================
+   TECHNOLOGY ITEM
+========================= */
+
+.tech-item {
+    width: 150px;
+    min-width: 150px;
+
+    height: 100px;
+
+    padding: 16px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 12px;
+
+    background: transparent;
+
+    border: none !important;
+    border-radius: 0;
+
+    box-shadow: none;
+}
+
+
+.tech-item:hover {
+    transform: translateY(-3px);
+
+    border-color: #424b57;
+
+    background: #1b2027;
+}
+
+
+.tech-item img {
+    width: 48px;
+    height: 48px;
+
+    object-fit: contain;
+}
+
+
+.tech-item span {
+    color: var(--text-secondary);
+
+    font-family: 'Manrope', sans-serif;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    text-align: center;
+}
+
+
+/* =========================
+   ANIMATION
+========================= */
+
+@keyframes tech-scroll {
+
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(calc(-50% - 9px));
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 576px) {
+
+    .tech-stack {
+        padding: 70px 0;
+    }
+
+
+    .tech-stack-container {
+        padding: 0 20px;
+    }
+
+
+    .tech-stack-heading {
+        margin-bottom: 36px;
+    }
+
+
+    .tech-carousel-track {
+        gap: 14px;
+
+        animation-duration: 26s;
+    }
+
+
+    .tech-item {
+        width: 135px;
+        min-width: 135px;
+
+        height: 105px;
+
+        padding: 16px;
+    }
+
+
+    .tech-item img {
+        width: 40px;
+        height: 40px;
+    }
+
+
+    .tech-carousel::before,
+    .tech-carousel::after {
+        width: 45px;
+    }
+
+}
+
+
+/* =========================
+   ACCESSIBILITY
+========================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .tech-carousel-track {
+        animation-duration: 50s;
+    }
+
+}

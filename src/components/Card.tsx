@@ -2,6 +2,7 @@ import { NavLink } from 'react-router-dom'
 import '../styles/Card.css'
 
 type CardProps = {
+  icon?: string
   eyebrow?: string
   title: string
   description?: string
@@ -16,6 +17,7 @@ type CardProps = {
 }
 
 function Card({
+  icon,
   eyebrow,
   title,
   description,
@@ -40,6 +42,12 @@ function Card({
 
       <div className="content-card__body">
 
+        {icon && (
+          <div className="content-card__icon">
+            {icon}
+          </div>
+        )}
+
         {eyebrow && (
           <p className="content-card__eyebrow">
             {eyebrow}
@@ -60,8 +68,8 @@ function Card({
           <NavLink
             to={link}
             className="content-card__link"
+            aria-label={`${linkText}: ${title}`}
           >
-            {linkText}
             <span>→</span>
           </NavLink>
         )}
