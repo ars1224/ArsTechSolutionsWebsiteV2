@@ -1,0 +1,143 @@
+.content-card {
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+
+    background: var(--bg-elevated);
+
+    border: 1px solid var(--border-color);
+
+    border-radius: 16px;
+
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        background-color 0.25s ease;
+}
+
+
+.content-card:hover {
+    transform: translateY(-4px);
+
+    border-color: #384453;
+
+    background: #1a2027;
+}
+
+
+.content-card__image-wrapper {
+    width: 100%;
+
+    aspect-ratio: 16 / 10;
+
+    overflow: hidden;
+}
+
+
+.content-card__image {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition: transform 0.35s ease;
+}
+
+
+.content-card:hover .content-card__image {
+    transform: scale(1.03);
+}
+
+
+.content-card__body {
+    padding: 26px;
+
+    display: flex;
+    flex-direction: column;
+
+    flex: 1;
+}
+
+
+.content-card__eyebrow {
+    margin: 0 0 12px;
+
+    color: var(--accent);
+
+    font-family: 'Manrope', sans-serif;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: 0.08em;
+
+    text-transform: uppercase;
+}
+
+
+.content-card__title {
+    margin: 0;
+
+    color: var(--text-primary);
+
+    font-family: 'Manrope', sans-serif;
+
+    font-size: 22px;
+    font-weight: 700;
+
+    line-height: 1.25;
+}
+
+
+.content-card__description {
+    margin: 14px 0 0;
+
+    color: var(--text-secondary);
+
+    font-family: 'Inter', sans-serif;
+
+    line-height: 1.7;
+}
+
+
+.content-card__link {
+    margin-top: auto;
+    padding-top: 22px;
+
+    display: inline-flex;
+    align-items: center;
+
+    gap: 10px;
+
+    color: var(--text-primary);
+
+    font-family: 'Manrope', sans-serif;
+
+    font-weight: 700;
+
+    text-decoration: none;
+}
+
+
+.content-card__link span {
+    color: var(--accent);
+
+    transition: transform 0.2s ease;
+}
+
+
+.content-card__link:hover span {
+    transform: translateX(4px);
+}
+
+
+.content-card__link:focus-visible {
+    outline: 3px solid var(--accent);
+
+    outline-offset: 4px;
+
+    border-radius: 4px;
+}
