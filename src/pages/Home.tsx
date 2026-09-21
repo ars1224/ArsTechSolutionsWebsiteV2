@@ -306,11 +306,12 @@ const projects = [
     
     <>
 
-    <PageMeta
-  title="Web Design, Development & Digital Solutions NZ"
-  description="ARS Tech Solutions provides website design, web development, custom web applications, website redesigns and practical technology solutions for businesses across New Zealand."
-  path="/"
-/>
+      <PageMeta
+        title="Web Design, Development & Digital Solutions NZ"
+        description="ARS Tech Solutions builds modern websites, web apps and practical digital solutions for businesses across New Zealand."
+        path="/"
+      />
+      
       <Hero
         eyebrow="WEB DESIGN  • WEB DEVELOPMENT  •  WEB SOLUTIONS"
         title="Digital solutions built for growing"
