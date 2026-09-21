@@ -311,7 +311,7 @@ const projects = [
         description="ARS Tech Solutions builds modern websites, web apps and practical digital solutions for businesses across New Zealand."
         path="/"
       />
-      
+
       <Hero
         eyebrow="WEB DESIGN  • WEB DEVELOPMENT  •  WEB SOLUTIONS"
         title="Digital solutions built for growing"

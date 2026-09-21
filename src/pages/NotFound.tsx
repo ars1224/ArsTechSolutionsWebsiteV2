@@ -8,10 +8,11 @@ function NotFound() {
   return (
     <>
     <PageMeta
-  title="Digital Solutions for New Zealand Businesses"
-  description="Practical digital solutions for businesses that need stronger websites, better customer journeys, custom web systems, improved visibility or technology support."
-  path="/solutions"
-/>
+      title="Page Not Found"
+      description="The requested page could not be found on the ARS Tech Solutions website."
+      path="/404"
+      noIndex
+    />
     <section className="not-found">
 
       <div className="container not-found-container">

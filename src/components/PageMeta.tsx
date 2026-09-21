@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { Head } from 'vite-react-ssg'
 
 
 type PageMetaProps = {
@@ -16,182 +16,121 @@ function PageMeta({
   noIndex = false
 }: PageMetaProps) {
 
-  useEffect(() => {
+  const siteName = 'ARS Tech Solutions'
 
-    const siteName = 'ARS Tech Solutions'
-    const siteUrl = 'https://arstechsolutions.com'
-
-    const fullTitle =
-      `${title} | ${siteName}`
-
-    const canonicalUrl =
-      `${siteUrl}${path}`
+  const siteUrl =
+    'https://arstechsolutions.com'
 
 
-    document.title = fullTitle
+  const fullTitle =
+    title.includes(siteName)
+      ? title
+      : `${title} | ${siteName}`
 
 
-    function setMeta(
-      selector: string,
-      attribute: string,
-      value: string
-    ) {
-
-      let element =
-        document.head.querySelector<HTMLMetaElement>(
-          selector
-        )
+  const canonicalUrl =
+    path === '/'
+      ? siteUrl
+      : `${siteUrl}${path}`
 
 
-      if (!element) {
+  return (
+    <Head>
 
-        element =
-          document.createElement('meta')
+      {/* =========================
+          BASIC SEO
+      ========================= */}
 
-        document.head.appendChild(element)
-
-      }
-
-
-      const selectorMatch =
-        selector.match(
-          /\[(name|property)="([^"]+)"\]/
-        )
+      <title>
+        {fullTitle}
+      </title>
 
 
-      if (selectorMatch) {
-
-        element.setAttribute(
-          selectorMatch[1],
-          selectorMatch[2]
-        )
-
-      }
+      <meta
+        name="description"
+        content={description}
+      />
 
 
-      element.setAttribute(
-        attribute,
-        value
-      )
-
-    }
-
-
-    /* =========================
-       DESCRIPTION
-    ========================= */
-
-    setMeta(
-      'meta[name="description"]',
-      'content',
-      description
-    )
+      <meta
+        name="robots"
+        content={
+          noIndex
+            ? 'noindex, nofollow'
+            : 'index, follow'
+        }
+      />
 
 
-    /* =========================
-       ROBOTS
-    ========================= */
-
-    setMeta(
-      'meta[name="robots"]',
-      'content',
-      noIndex
-        ? 'noindex, nofollow'
-        : 'index, follow'
-    )
+      <link
+        rel="canonical"
+        href={canonicalUrl}
+      />
 
 
-    /* =========================
-       OPEN GRAPH
-    ========================= */
+      {/* =========================
+          OPEN GRAPH
+      ========================= */}
 
-    setMeta(
-      'meta[property="og:title"]',
-      'content',
-      fullTitle
-    )
-
-    setMeta(
-      'meta[property="og:description"]',
-      'content',
-      description
-    )
-
-    setMeta(
-      'meta[property="og:type"]',
-      'content',
-      'website'
-    )
-
-    setMeta(
-      'meta[property="og:url"]',
-      'content',
-      canonicalUrl
-    )
-
-    setMeta(
-      'meta[property="og:site_name"]',
-      'content',
-      siteName
-    )
+      <meta
+        property="og:title"
+        content={fullTitle}
+      />
 
 
-    /* =========================
-       TWITTER
-    ========================= */
-
-    setMeta(
-      'meta[name="twitter:card"]',
-      'content',
-      'summary'
-    )
-
-    setMeta(
-      'meta[name="twitter:title"]',
-      'content',
-      fullTitle
-    )
-
-    setMeta(
-      'meta[name="twitter:description"]',
-      'content',
-      description
-    )
+      <meta
+        property="og:description"
+        content={description}
+      />
 
 
-    /* =========================
-       CANONICAL
-    ========================= */
-
-    let canonical =
-      document.head.querySelector<HTMLLinkElement>(
-        'link[rel="canonical"]'
-      )
+      <meta
+        property="og:type"
+        content="website"
+      />
 
 
-    if (!canonical) {
-
-      canonical =
-        document.createElement('link')
-
-      canonical.rel = 'canonical'
-
-      document.head.appendChild(canonical)
-
-    }
+      <meta
+        property="og:url"
+        content={canonicalUrl}
+      />
 
 
-    canonical.href = canonicalUrl
-
-  }, [
-    title,
-    description,
-    path,
-    noIndex
-  ])
+      <meta
+        property="og:site_name"
+        content={siteName}
+      />
 
 
-  return null
+      <meta
+        property="og:locale"
+        content="en_NZ"
+      />
+
+
+      {/* =========================
+          TWITTER
+      ========================= */}
+
+      <meta
+        name="twitter:card"
+        content="summary"
+      />
+
+
+      <meta
+        name="twitter:title"
+        content={fullTitle}
+      />
+
+
+      <meta
+        name="twitter:description"
+        content={description}
+      />
+
+    </Head>
+  )
 }
 
 
