@@ -43,13 +43,12 @@
     display: flex;
 
     align-items: center;
-
     justify-content: space-between;
 }
 
 
 /* =========================
-   LOGO + MOBILE BURGER
+   LOGO + BURGER GROUP
 ========================= */
 
 .nav-brand-group {
@@ -80,25 +79,24 @@
 ========================= */
 
 .desktop-navigation {
+    margin-left: auto;
+
     display: flex;
 
     align-items: center;
-
-    margin-left: auto;
 }
 
 
 .nav-links {
-    display: flex;
+    margin: 0;
+    padding: 0;
 
+    display: flex;
     flex-direction: row;
 
     align-items: center;
 
     gap: 22px;
-
-    margin: 0;
-    padding: 0;
 }
 
 
@@ -111,15 +109,16 @@
     padding-left: 0 !important;
     padding-right: 0 !important;
 
+    color: var(--text-secondary) !important;
+
     font-family: 'Manrope', sans-serif;
 
     font-size: 15px;
-
     font-weight: 600;
 
-    color: var(--text-secondary) !important;
-
     text-decoration: none;
+
+    transition: color 0.2s ease;
 }
 
 
@@ -130,51 +129,18 @@
 
 
 /* =========================
-   CTA BUTTON
-========================= */
-
-.nav-cta {
-    background: var(--accent);
-
-    color: #ffffff;
-
-    padding: 11px 18px;
-
-    border: 1px solid var(--accent);
-
-    border-radius: 9px;
-
-    font-family: 'Manrope', sans-serif;
-
-    font-size: 14px;
-
-    font-weight: 700;
-
-    text-decoration: none;
-}
-
-
-.nav-cta:hover {
-    background: var(--accent-hover);
-
-    border-color: var(--accent-hover);
-
-    color: #ffffff;
-}
-
-
-/* =========================
    MOBILE BURGER
 ========================= */
 
 .mobile-menu-button {
     display: none;
 
-    align-items: center;
+    padding: 8px;
 
+    align-items: center;
     justify-content: center;
 
-    padding: 8px;
+    background: transparent;
 
     border: 1px solid var(--border-color);
 
@@ -200,7 +166,7 @@
     width: min(82vw, 320px) !important;
     height: 100vh !important;
 
-    background-color: var(--bg-secondary) !important;
+    background: var(--bg-secondary) !important;
 
     color: var(--text-primary);
 
@@ -215,7 +181,7 @@
 
     padding: 20px 22px;
 
-    background-color: var(--bg-secondary);
+    background: var(--bg-secondary);
 
     border-bottom: 1px solid var(--border-color);
 }
@@ -224,6 +190,8 @@
 .offcanvas-logo {
     width: 110px;
     height: auto;
+
+    display: block;
 }
 
 
@@ -232,10 +200,10 @@
 
     padding: 22px;
 
-    background-color: var(--bg-secondary);
-
     display: flex;
     flex-direction: column;
+
+    background: var(--bg-secondary);
 
     overflow-y: auto;
 }
@@ -268,17 +236,20 @@
 .mobile-nav-links a {
     width: 100%;
 
-    display: block;
-
     padding: 17px 4px;
+
+    display: block;
 
     color: var(--text-secondary) !important;
 
     font-family: 'Manrope', sans-serif;
+
     font-size: 17px;
     font-weight: 600;
 
     text-decoration: none;
+
+    transition: color 0.2s ease;
 }
 
 
@@ -287,6 +258,7 @@
     color: var(--text-primary) !important;
 }
 
+
 /* =========================
    MOBILE CTA
 ========================= */
@@ -294,39 +266,65 @@
 .mobile-cta {
     width: 100%;
 
+    min-height: 48px;
+
     margin-top: 28px;
+
+    padding: 0 20px;
 
     display: flex;
 
     align-items: center;
-
     justify-content: center;
-}
 
-.nav-link:focus-visible,
-.nav-cta:focus-visible,
-.navbar-brand:focus-visible,
-.mobile-menu-button:focus-visible,
-.mobile-nav-links a:focus-visible,
-.btn-close:focus-visible {
-    outline: 3px solid var(--accent);
-    outline-offset: 4px;
-    border-radius: 6px;
-}
+    background: var(--accent);
 
-.nav-link {
-    transition: color 0.2s ease;
-}
+    border: 1px solid var(--accent);
 
-.nav-cta {
+    border-radius: 9px;
+
+    color: #ffffff;
+
+    font-family: 'Manrope', sans-serif;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    text-decoration: none;
+
     transition:
         background-color 0.2s ease,
         border-color 0.2s ease,
         transform 0.2s ease;
 }
 
-.nav-cta:hover {
+
+.mobile-cta:hover {
+    background: var(--accent-hover);
+
+    border-color: var(--accent-hover);
+
+    color: #ffffff;
+
     transform: translateY(-1px);
+}
+
+
+/* =========================
+   ACCESSIBILITY
+========================= */
+
+.nav-link:focus-visible,
+.navbar-brand:focus-visible,
+.mobile-menu-button:focus-visible,
+.mobile-nav-links a:focus-visible,
+.mobile-cta:focus-visible,
+.btn-close:focus-visible {
+    outline: 3px solid var(--accent);
+
+    outline-offset: 4px;
+
+    border-radius: 6px;
 }
 
 

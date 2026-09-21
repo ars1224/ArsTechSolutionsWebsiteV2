@@ -1,0 +1,431 @@
+/* =========================
+   HERO
+========================= */
+
+.work-hero {
+    padding: 110px 24px 90px;
+
+    background:
+        radial-gradient(
+            circle at 80% 20%,
+            rgba(79, 140, 255, 0.08),
+            transparent 35%
+        ),
+        var(--bg-primary);
+}
+
+
+.work-hero-container {
+    max-width: 1240px;
+
+    margin: 0 auto;
+}
+
+
+.work-eyebrow {
+    margin: 0 0 18px;
+
+    color: var(--accent);
+
+    font-family: 'Manrope', sans-serif;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    letter-spacing: 0.14em;
+
+    text-transform: uppercase;
+}
+
+
+.work-hero h1 {
+    max-width: 950px;
+
+    margin: 0;
+
+    color: var(--text-primary);
+
+    font-family: 'Manrope', sans-serif;
+
+    font-size: clamp(48px, 7vw, 82px);
+
+    font-weight: 750;
+
+    line-height: 1;
+
+    letter-spacing: -0.045em;
+}
+
+
+.work-hero h1 span {
+    color: var(--accent);
+}
+
+
+.work-intro {
+    max-width: 720px;
+
+    margin: 30px 0 0;
+
+    color: var(--text-secondary);
+
+    font-family: 'Inter', sans-serif;
+
+    font-size: 18px;
+
+    line-height: 1.75;
+}
+
+
+/* =========================
+   PROJECTS
+========================= */
+
+.work-projects {
+    padding: 20px 24px 110px;
+
+    background: var(--bg-primary);
+}
+
+
+.work-projects-container {
+    max-width: 1240px;
+
+    margin: 0 auto;
+}
+
+
+.work-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 24px;
+}
+
+
+/* =========================
+   PROJECT CARD
+========================= */
+
+.work-card {
+    min-height: 420px;
+
+    padding: 38px;
+
+    display: flex;
+    flex-direction: column;
+
+    background: var(--bg-secondary);
+
+    border: 1px solid var(--border-color);
+
+    border-radius: 18px;
+
+    transition:
+        transform 0.25s ease,
+        background-color 0.25s ease,
+        border-color 0.25s ease;
+}
+
+
+.work-card:hover {
+    transform: translateY(-5px);
+
+    background: var(--bg-elevated);
+
+    border-color: #414a55;
+}
+
+
+/* =========================
+   CARD HEADER
+========================= */
+
+.work-card-top {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+
+.work-card-number {
+    color: var(--accent);
+
+    font-family: 'Manrope', sans-serif;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    letter-spacing: 0.08em;
+}
+
+
+.work-card-type {
+    padding: 7px 11px;
+
+    background: rgba(79, 140, 255, 0.08);
+
+    border-radius: 50px;
+
+    color: var(--accent);
+
+    font-family: 'Inter', sans-serif;
+
+    font-size: 11px;
+    font-weight: 600;
+}
+
+
+/* =========================
+   CARD CONTENT
+========================= */
+
+.work-card-content {
+    margin-top: 70px;
+}
+
+
+.work-card-content h2 {
+    margin: 0;
+
+    color: var(--text-primary);
+
+    font-family: 'Manrope', sans-serif;
+
+    font-size: clamp(26px, 3vw, 34px);
+
+    line-height: 1.2;
+
+    letter-spacing: -0.025em;
+}
+
+
+.work-card-content p {
+    max-width: 520px;
+
+    margin: 18px 0 0;
+
+    color: var(--text-secondary);
+
+    font-family: 'Inter', sans-serif;
+
+    font-size: 15px;
+
+    line-height: 1.75;
+}
+
+
+/* =========================
+   TECHNOLOGIES
+========================= */
+
+.work-card-tech {
+    margin-top: auto;
+
+    padding-top: 36px;
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+}
+
+
+.work-card-tech span {
+    padding: 7px 11px;
+
+    background: var(--bg-primary);
+
+    border-radius: 6px;
+
+    color: var(--text-secondary);
+
+    font-family: 'Inter', sans-serif;
+
+    font-size: 11px;
+}
+
+
+/* =========================
+   PORTFOLIO NOTE
+========================= */
+
+.work-note {
+    padding: 90px 24px;
+
+    background: var(--bg-secondary);
+}
+
+
+.work-note-container {
+    max-width: 1240px;
+
+    margin: 0 auto;
+}
+
+
+.work-note h2 {
+    margin: 0;
+
+    color: var(--text-primary);
+
+    font-family: 'Manrope', sans-serif;
+
+    font-size: clamp(34px, 4vw, 50px);
+
+    line-height: 1.15;
+
+    letter-spacing: -0.03em;
+}
+
+
+.work-note-container > p:last-child {
+    max-width: 650px;
+
+    margin: 20px 0 0;
+
+    color: var(--text-secondary);
+
+    font-family: 'Inter', sans-serif;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================
+   CTA
+========================= */
+
+.work-cta {
+    padding: 100px 24px;
+
+    background: var(--bg-primary);
+}
+
+
+.work-cta-container {
+    max-width: 1240px;
+
+    margin: 0 auto;
+
+    display: flex;
+
+    align-items: flex-end;
+    justify-content: space-between;
+
+    gap: 50px;
+}
+
+
+.work-cta-container h2 {
+    max-width: 700px;
+
+    margin: 0;
+
+    color: var(--text-primary);
+
+    font-family: 'Manrope', sans-serif;
+
+    font-size: clamp(34px, 4vw, 50px);
+
+    line-height: 1.15;
+
+    letter-spacing: -0.03em;
+}
+
+
+.work-cta-description {
+    max-width: 620px;
+
+    margin: 20px 0 0;
+
+    color: var(--text-secondary);
+
+    font-family: 'Inter', sans-serif;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+    .work-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .work-cta-container {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 576px) {
+
+    .work-hero {
+        padding: 70px 20px 60px;
+    }
+
+
+    .work-hero h1 {
+        font-size: clamp(42px, 12vw, 58px);
+    }
+
+
+    .work-intro {
+        font-size: 16px;
+    }
+
+
+    .work-projects {
+        padding: 10px 20px 80px;
+    }
+
+
+    .work-card {
+        min-height: 370px;
+
+        padding: 28px;
+    }
+
+
+    .work-card-content {
+        margin-top: 50px;
+    }
+
+
+    .work-note {
+        padding: 70px 20px;
+    }
+
+
+    .work-cta {
+        padding: 70px 20px;
+    }
+
+
+    .work-cta-container .ars-button {
+        width: 100%;
+    }
+
+}

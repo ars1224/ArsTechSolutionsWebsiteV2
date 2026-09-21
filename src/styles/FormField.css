@@ -1,0 +1,136 @@
+.form-field {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 9px;
+}
+
+
+/* =========================
+   LABEL
+========================= */
+
+.form-field__label {
+    color: var(--text-primary);
+
+    font-family: 'Manrope', sans-serif;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+.form-field__required {
+    margin-left: 4px;
+
+    color: var(--accent);
+}
+
+
+/* =========================
+   INPUT / TEXTAREA
+========================= */
+
+.form-field__control {
+    width: 100%;
+    min-height: 52px;
+
+    padding: 0 16px;
+
+    background: var(--bg-elevated);
+
+    border: 1px solid var(--border-color);
+
+    border-radius: 9px;
+
+    color: var(--text-primary);
+
+    font-family: 'Inter', sans-serif;
+
+    font-size: 15px;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        background-color 0.2s ease;
+}
+
+
+.form-field__control::placeholder {
+    color: #747d87;
+}
+
+
+.form-field__control:hover {
+    border-color: #404955;
+}
+
+
+.form-field__control:focus {
+    border-color: var(--accent);
+
+    box-shadow:
+        0 0 0 3px rgba(79, 140, 255, 0.15);
+}
+
+
+/* =========================
+   TEXTAREA
+========================= */
+
+.form-field__textarea {
+    min-height: 140px;
+
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+    resize: vertical;
+}
+
+
+/* =========================
+   ERROR STATE
+========================= */
+
+.form-field--error .form-field__control {
+    border-color: #ff6464;
+}
+
+
+.form-field--error .form-field__control:focus {
+    border-color: #ff6464;
+
+    box-shadow:
+        0 0 0 3px rgba(255, 100, 100, 0.15);
+}
+
+
+.form-field__error {
+    margin: 0;
+
+    color: #ff7777;
+
+    font-family: 'Inter', sans-serif;
+
+    font-size: 13px;
+
+    line-height: 1.4;
+}
+
+
+/* =========================
+   AUTOFILL
+========================= */
+
+.form-field__control:-webkit-autofill,
+.form-field__control:-webkit-autofill:hover,
+.form-field__control:-webkit-autofill:focus {
+    -webkit-text-fill-color: var(--text-primary);
+
+    transition:
+        background-color 9999s ease-in-out 0s;
+}

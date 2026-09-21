@@ -57,7 +57,6 @@
     font-family: 'Manrope', sans-serif;
 
     font-size: 13px;
-
     font-weight: 700;
 
     letter-spacing: 0.28em;
@@ -86,7 +85,6 @@
     font-family: 'Manrope', sans-serif;
 
     font-size: clamp(52px, 5vw, 82px);
-
     font-weight: 750;
 
     line-height: 0.98;
@@ -133,75 +131,30 @@
 }
 
 
-.hero-btn {
-    min-height: 56px;
+.hero-arrow {
+    margin-left: 8px;
 
-    padding: 0 26px;
+    font-size: 22px;
 
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-
-    border-radius: 10px;
-
-    font-family: 'Manrope', sans-serif;
-
-    font-size: 16px;
-
-    font-weight: 700;
-
-    text-decoration: none;
-
-    transition:
-        transform 0.2s ease,
-        background-color 0.2s ease,
-        border-color 0.2s ease;
+    transition: transform 0.2s ease;
 }
 
 
-.hero-btn:hover {
-    transform: translateY(-2px);
+.hero-actions .ars-button:hover .hero-arrow {
+    transform: translateX(4px);
 }
 
 
-.hero-btn-primary {
-    background: var(--accent);
-
-    border: 1px solid var(--accent);
-
-    color: white;
-}
-
-
-.hero-btn-primary:hover {
-    background: var(--accent-hover);
-
-    color: white;
-}
-
-
-.hero-btn-secondary {
+/* Hero-specific secondary button */
+.hero-secondary-button {
     background: rgba(10, 14, 20, 0.45);
-
-    border: 1px solid #48515f;
-
-    color: white;
 
     backdrop-filter: blur(8px);
 }
 
 
-.hero-btn-secondary:hover {
+.hero-secondary-button:hover {
     background: var(--bg-elevated);
-
-    color: white;
-}
-
-
-.hero-arrow {
-    margin-left: 18px;
-
-    font-size: 22px;
 }
 
 
@@ -234,7 +187,6 @@
     font-family: monospace;
 
     font-size: 27px;
-
     font-weight: 700;
 }
 
@@ -309,14 +261,6 @@
         align-items: flex-start;
 
         background-position: 68% center;
-
-        background-image:
-            linear-gradient(
-                180deg,
-                rgba(6, 9, 14, 0.98) 0%,
-                rgba(6, 9, 14, 0.92) 55%,
-                rgba(6, 9, 14, 0.55) 100%
-            );
     }
 
 
@@ -356,7 +300,7 @@
     }
 
 
-    .hero-btn {
+    .hero-actions .ars-button {
         width: 100%;
     }
 

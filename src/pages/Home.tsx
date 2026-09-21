@@ -37,6 +37,9 @@ import vscodeLogo from '../assets/techstack/Visual Studio Code (VS Code).png'
 import visualStudioLogo from '../assets/techstack/Visual Studio.png'
 import viteLogo from '../assets/techstack/vite.svg'
 import wordpressLogo from '../assets/techstack/WordPress.png'
+import FAQ from '../components/FAQ'
+import FeaturedProjects from '../components/FeaturedProjects'
+import PageMeta from '../components/PageMeta'
 
 function Home() {
 
@@ -242,11 +245,74 @@ function Home() {
   }
 ]
 
+const faqItems = [
+  {
+    question: 'What types of websites do you build?',
+    answer:
+      'ARS Tech Solutions builds business websites, redesigned websites, e-commerce websites and custom web-based solutions based on the needs of each project.'
+  },
+  {
+    question: 'Can you redesign an existing website?',
+    answer:
+      'Yes. We can review your current website and improve its design, structure, responsiveness, usability and overall presentation.'
+  },
+  {
+    question: 'Do you build custom web applications?',
+    answer:
+      'Yes. We can build practical browser-based systems and tools designed around specific business workflows and requirements.'
+  },
+  {
+    question: 'Do you provide SEO services?',
+    answer:
+      'We can improve technical SEO, website structure, performance, metadata, mobile usability and other on-site factors that support search visibility.'
+  },
+  {
+    question: 'Do you offer ongoing website support?',
+    answer:
+      'Yes. Website care can include updates, fixes, content changes, improvements and general maintenance depending on what your website needs.'
+  },
+  {
+    question: 'Do you provide IT support as well?',
+    answer:
+      'Yes. ARS Tech Solutions also provides practical help with computers, software setup, troubleshooting and other everyday technology issues.'
+  },
+  {
+    question: 'Can you work with businesses outside Canterbury?',
+    answer:
+      'Yes. ARS Tech Solutions can work remotely with businesses across New Zealand while also supporting local businesses in Canterbury.'
+  }
+]
+
+const projects = [
+  {
+    category: 'Business Website',
+    title: 'Business Website Project',
+    description:
+      'A responsive website focused on clearer services, stronger presentation and easier customer enquiries.',
+    link: '/work'
+  },
+  {
+    category: 'Web Application',
+    title: 'Custom Web Application',
+    description:
+      'A practical browser-based system built around real workflows, data and user requirements.',
+    link: '/work'
+  }
+]
+
+
+
   return (
     
     <>
+
+    <PageMeta
+  title="Web Design, Development & Digital Solutions NZ"
+  description="ARS Tech Solutions provides website design, web development, custom web applications, website redesigns and practical technology solutions for businesses across New Zealand."
+  path="/"
+/>
       <Hero
-        eyebrow="WEB DESIGN  •  DEVELOPMENT  •  TECH SOLUTIONS"
+        eyebrow="WEB DESIGN  • WEB DEVELOPMENT  •  WEB SOLUTIONS"
         title="Digital solutions built for growing"
         highlightedText="businesses."
         description="ARS Tech Solutions helps New Zealand businesses build stronger websites, improve their digital presence and create practical technology solutions."
@@ -293,7 +359,14 @@ function Home() {
 
       </section>
 
+      <FeaturedProjects projects={projects} />
+
       <TechStack technologies={technologies} />
+
+      <FAQ
+        items={faqItems}
+        description="A few common questions about working with ARS Tech Solutions."
+      />
 
       <CTA
         eyebrow="Ready to Build?"

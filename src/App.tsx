@@ -12,11 +12,15 @@ import Contact from './pages/Contact'
 import Footer from './components/Footer'
 import Terms from './pages/Terms'
 import Privacy from './pages/Privacy'
+import NotFound from './pages/NotFound'
+import ScrollToTop from './components/ScrollToTop'
+
 
 function App() {
   return (
     <>
       <Navigation />
+      <ScrollToTop />
 
       <main>
         <Routes>
@@ -29,6 +33,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/terms" element={<Terms />} />
+          <Route path="*" element={<NotFound />}/>
         </Routes>
       </main>
 

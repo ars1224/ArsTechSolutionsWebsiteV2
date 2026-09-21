@@ -1,0 +1,371 @@
+/* =========================
+   HERO
+========================= */
+
+.solutions-hero {
+    padding: 110px 24px 90px;
+
+    background:
+        radial-gradient(
+            circle at 80% 20%,
+            rgba(79, 140, 255, 0.08),
+            transparent 35%
+        ),
+        var(--bg-primary);
+}
+
+
+.solutions-hero-container {
+    max-width: 1240px;
+
+    margin: 0 auto;
+}
+
+
+.solutions-eyebrow {
+    margin: 0 0 18px;
+
+    color: var(--accent);
+
+    font-family: 'Manrope', sans-serif;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    letter-spacing: 0.14em;
+
+    text-transform: uppercase;
+}
+
+
+.solutions-hero h1 {
+    max-width: 980px;
+
+    margin: 0;
+
+    color: var(--text-primary);
+
+    font-family: 'Manrope', sans-serif;
+
+    font-size: clamp(48px, 7vw, 82px);
+
+    font-weight: 750;
+
+    line-height: 1;
+
+    letter-spacing: -0.045em;
+}
+
+
+.solutions-hero h1 span {
+    color: var(--accent);
+}
+
+
+.solutions-intro {
+    max-width: 730px;
+
+    margin: 30px 0 0;
+
+    color: var(--text-secondary);
+
+    font-family: 'Inter', sans-serif;
+
+    font-size: 18px;
+
+    line-height: 1.75;
+}
+
+
+/* =========================
+   SOLUTIONS
+========================= */
+
+.solutions-section {
+    padding: 20px 24px 110px;
+
+    background: var(--bg-primary);
+}
+
+
+.solutions-container {
+    max-width: 1240px;
+
+    margin: 0 auto;
+}
+
+
+.solution-item {
+    padding: 54px 0;
+
+    display: grid;
+
+    grid-template-columns:
+        70px
+        minmax(320px, 1.1fr)
+        minmax(280px, 0.9fr);
+
+    gap: 48px;
+
+    border-top: 1px solid var(--border-color);
+}
+
+
+.solution-item:last-child {
+    border-bottom: 1px solid var(--border-color);
+}
+
+
+/* =========================
+   NUMBER
+========================= */
+
+.solution-number {
+    padding-top: 3px;
+
+    color: var(--accent);
+
+    font-family: 'Manrope', sans-serif;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    letter-spacing: 0.08em;
+}
+
+
+/* =========================
+   MAIN
+========================= */
+
+.solution-problem {
+    margin: 0 0 12px;
+
+    color: var(--accent);
+
+    font-family: 'Inter', sans-serif;
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
+.solution-main h2 {
+    max-width: 570px;
+
+    margin: 0;
+
+    color: var(--text-primary);
+
+    font-family: 'Manrope', sans-serif;
+
+    font-size: clamp(28px, 3vw, 38px);
+
+    line-height: 1.2;
+
+    letter-spacing: -0.025em;
+}
+
+
+.solution-description {
+    max-width: 600px;
+
+    margin: 18px 0 0;
+
+    color: var(--text-secondary);
+
+    font-family: 'Inter', sans-serif;
+
+    font-size: 15px;
+
+    line-height: 1.75;
+}
+
+
+/* =========================
+   RESULTS
+========================= */
+
+.solution-results-title {
+    margin: 0 0 17px;
+
+    color: var(--text-primary);
+
+    font-family: 'Manrope', sans-serif;
+
+    font-size: 13px;
+    font-weight: 700;
+}
+
+
+.solution-results ul {
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 12px;
+
+    list-style: none;
+}
+
+
+.solution-results li {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 11px;
+
+    color: var(--text-secondary);
+
+    font-family: 'Inter', sans-serif;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+}
+
+
+.solution-results li span {
+    color: var(--accent);
+
+    font-weight: 700;
+}
+
+
+/* =========================
+   CTA
+========================= */
+
+.solutions-cta {
+    padding: 90px 24px;
+
+    background: var(--bg-secondary);
+}
+
+
+.solutions-cta-container {
+    max-width: 1240px;
+
+    margin: 0 auto;
+
+    display: flex;
+
+    align-items: flex-end;
+    justify-content: space-between;
+
+    gap: 50px;
+}
+
+
+.solutions-cta-container h2 {
+    max-width: 760px;
+
+    margin: 0;
+
+    color: var(--text-primary);
+
+    font-family: 'Manrope', sans-serif;
+
+    font-size: clamp(34px, 4vw, 50px);
+
+    line-height: 1.15;
+
+    letter-spacing: -0.03em;
+}
+
+
+.solutions-cta-description {
+    max-width: 640px;
+
+    margin: 20px 0 0;
+
+    color: var(--text-secondary);
+
+    font-family: 'Inter', sans-serif;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+    .solution-item {
+        grid-template-columns: 50px 1fr;
+
+        gap: 30px;
+    }
+
+
+    .solution-results {
+        grid-column: 2;
+    }
+
+
+    .solutions-cta-container {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 576px) {
+
+    .solutions-hero {
+        padding: 70px 20px 60px;
+    }
+
+
+    .solutions-hero h1 {
+        font-size: clamp(42px, 12vw, 58px);
+    }
+
+
+    .solutions-intro {
+        font-size: 16px;
+    }
+
+
+    .solutions-section {
+        padding: 10px 20px 80px;
+    }
+
+
+    .solution-item {
+        padding: 40px 0;
+
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+    }
+
+
+    .solution-results {
+        grid-column: auto;
+    }
+
+
+    .solutions-cta {
+        padding: 70px 20px;
+    }
+
+
+    .solutions-cta-container .ars-button {
+        width: 100%;
+    }
+
+}

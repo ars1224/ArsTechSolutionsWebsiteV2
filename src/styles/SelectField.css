@@ -1,0 +1,144 @@
+.select-field {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 9px;
+}
+
+
+/* =========================
+   LABEL
+========================= */
+
+.select-field__label {
+    color: var(--text-primary);
+
+    font-family: 'Manrope', sans-serif;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+.select-field__required {
+    margin-left: 4px;
+
+    color: var(--accent);
+}
+
+
+/* =========================
+   SELECT
+========================= */
+
+.select-field__wrapper {
+    width: 100%;
+
+    position: relative;
+}
+
+
+.select-field__control {
+    width: 100%;
+    min-height: 52px;
+
+    padding: 0 46px 0 16px;
+
+    appearance: none;
+
+    background: var(--bg-elevated);
+
+    border: 1px solid var(--border-color);
+
+    border-radius: 9px;
+
+    color: var(--text-primary);
+
+    font-family: 'Inter', sans-serif;
+
+    font-size: 15px;
+
+    outline: none;
+
+    cursor: pointer;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        background-color 0.2s ease;
+}
+
+
+/* custom arrow */
+.select-field__wrapper::after {
+    content: "";
+
+    width: 8px;
+    height: 8px;
+
+    position: absolute;
+
+    top: 50%;
+    right: 18px;
+
+    border-right: 2px solid var(--text-secondary);
+    border-bottom: 2px solid var(--text-secondary);
+
+    transform:
+        translateY(-70%)
+        rotate(45deg);
+
+    pointer-events: none;
+}
+
+
+.select-field__control:hover {
+    border-color: #404955;
+}
+
+
+.select-field__control:focus {
+    border-color: var(--accent);
+
+    box-shadow:
+        0 0 0 3px rgba(79, 140, 255, 0.15);
+}
+
+
+.select-field__control option {
+    background: var(--bg-elevated);
+
+    color: var(--text-primary);
+}
+
+
+/* =========================
+   ERROR
+========================= */
+
+.select-field--error .select-field__control {
+    border-color: #ff6464;
+}
+
+
+.select-field--error .select-field__control:focus {
+    border-color: #ff6464;
+
+    box-shadow:
+        0 0 0 3px rgba(255, 100, 100, 0.15);
+}
+
+
+.select-field__error {
+    margin: 0;
+
+    color: #ff7777;
+
+    font-family: 'Inter', sans-serif;
+
+    font-size: 13px;
+
+    line-height: 1.4;
+}

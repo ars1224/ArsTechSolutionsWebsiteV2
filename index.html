@@ -1,13 +1,102 @@
 <!doctype html>
+
 <html lang="en">
+
   <head>
+
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ARS Tech Solutions</title>
+    <link rel="icon" type="image/png" href="/favicon.png"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" 
+    content="ARS Tech Solutions provides website design, web development, custom web applications, website improvements and practical technology solutions for businesses across New Zealand."/>
+    <title>
+      ARS Tech Solutions | Web Design & Digital Solutions NZ
+    </title>
+
   </head>
   <body>
+
+    <!--
+      NETLIFY FORM BLUEPRINT
+
+      This hidden form allows Netlify to detect
+      the React enquiry form during deployment.
+    -->
+
+    <form
+      name="ars-enquiry"
+      method="POST"
+      data-netlify="true"
+      netlify-honeypot="bot-field"
+      hidden
+    >
+
+      <!-- Netlify Honeypot -->
+      <input
+        type="text"
+        name="bot-field"
+      />
+
+      <!-- Form Name -->
+      <input
+        type="hidden"
+        name="form-name"
+        value="ars-enquiry"
+      />
+
+      <!-- Name -->
+      <input
+        type="text"
+        name="name"
+      />
+
+      <!-- Email -->
+      <input
+        type="email"
+        name="email"
+      />
+
+      <!-- Phone -->
+      <input
+        type="tel"
+        name="phone"
+      />
+
+      <!-- Business -->
+      <input
+        type="text"
+        name="business"
+      />
+
+      <!-- Service -->
+      <input
+        type="text"
+        name="service"
+      />
+
+      <!-- Existing Website -->
+      <input
+        type="url"
+        name="website"
+      />
+
+      <!-- Message -->
+      <textarea
+        name="message"
+      ></textarea>
+
+    </form>
+
+
+    <!-- React Application -->
     <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+
+
+    <script
+      type="module"
+      src="/src/main.tsx"
+    ></script>
+
   </body>
+
 </html>

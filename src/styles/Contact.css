@@ -1,0 +1,109 @@
+/* =========================
+   CONTACT HERO
+========================= */
+
+.contact-hero {
+    padding: 100px 24px 70px;
+
+    background:
+        radial-gradient(
+            circle at 75% 20%,
+            rgba(79, 140, 255, 0.08),
+            transparent 35%
+        ),
+        var(--bg-primary);
+}
+
+
+.contact-hero-container {
+    max-width: 1240px;
+
+    margin: 0 auto;
+}
+
+
+/* =========================
+   EYEBROW
+========================= */
+
+.contact-eyebrow {
+    margin: 0 0 18px;
+
+    color: var(--accent);
+
+    font-family: 'Manrope', sans-serif;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    letter-spacing: 0.14em;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================
+   TITLE
+========================= */
+
+.contact-hero h1 {
+    max-width: 900px;
+
+    margin: 0;
+
+    color: var(--text-primary);
+
+    font-family: 'Manrope', sans-serif;
+
+    font-size: clamp(48px, 7vw, 84px);
+
+    font-weight: 750;
+
+    line-height: 1;
+
+    letter-spacing: -0.045em;
+}
+
+
+/* =========================
+   DESCRIPTION
+========================= */
+
+.contact-intro {
+    max-width: 700px;
+
+    margin: 30px 0 0;
+
+    color: var(--text-secondary);
+
+    font-family: 'Inter', sans-serif;
+
+    font-size: 18px;
+
+    line-height: 1.75;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 576px) {
+
+    .contact-hero {
+        padding: 70px 20px 45px;
+    }
+
+
+    .contact-hero h1 {
+        font-size: clamp(42px, 12vw, 58px);
+    }
+
+
+    .contact-intro {
+        margin-top: 24px;
+
+        font-size: 16px;
+    }
+
+}

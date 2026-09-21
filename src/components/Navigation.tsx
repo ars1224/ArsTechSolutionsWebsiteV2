@@ -1,6 +1,7 @@
 import { NavLink } from 'react-router-dom'
 import logo from '../assets/Logo.png'
 import '../styles/Navigation.css'
+import Button from './Button'
 
 function Navigation() {
   return (
@@ -87,12 +88,13 @@ function Navigation() {
                 </li>
 
                 <li className="nav-item ms-lg-3">
-                  <NavLink
+                  <Button
                     to="/contact"
-                    className="btn nav-cta"
+                    variant="primary"
+                    size="medium"
                   >
                     Request a Quote
-                  </NavLink>
+                  </Button>
                 </li>
 
               </ul>

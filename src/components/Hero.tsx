@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router-dom'
+import Button from './Button'
 import '../styles/Hero.css'
 
 type HeroProps = {
@@ -58,6 +58,7 @@ function Hero({
             </div>
           )}
 
+
           <h1 className="hero-title">
             {title}
 
@@ -69,31 +70,39 @@ function Hero({
             )}
           </h1>
 
+
           {description && (
             <p className="hero-description">
               {description}
             </p>
           )}
 
+
           <div className="hero-actions">
 
             {primaryText && primaryLink && (
-              <NavLink
+              <Button
                 to={primaryLink}
-                className="hero-btn hero-btn-primary"
+                variant="primary"
+                size="large"
               >
                 {primaryText}
-                <span className="hero-arrow">→</span>
-              </NavLink>
+
+                <span className="hero-arrow">
+                  →
+                </span>
+              </Button>
             )}
 
+
             {secondaryText && secondaryLink && (
-              <NavLink
+              <Button
                 to={secondaryLink}
-                className="hero-btn hero-btn-secondary"
+                variant="secondary"
+                size="large"
               >
                 {secondaryText}
-              </NavLink>
+              </Button>
             )}
 
           </div>
@@ -102,32 +111,59 @@ function Hero({
           <div className="hero-capabilities">
 
             <div className="hero-capability">
-              <span className="capability-icon">▣</span>
+
+              <span className="capability-icon">
+                ▣
+              </span>
 
               <div>
-                <strong>WEBSITES</strong>
-                <small>Professional & Modern</small>
+                <strong>
+                  WEBSITES
+                </strong>
+
+                <small>
+                  Professional & Modern
+                </small>
               </div>
+
             </div>
 
 
             <div className="hero-capability">
-              <span className="capability-icon">&lt;/&gt;</span>
+
+              <span className="capability-icon">
+                &lt;/&gt;
+              </span>
 
               <div>
-                <strong>WEB APPS</strong>
-                <small>Custom Solutions</small>
+                <strong>
+                  WEB APPS
+                </strong>
+
+                <small>
+                  Custom Solutions
+                </small>
               </div>
+
             </div>
 
 
             <div className="hero-capability">
-              <span className="capability-icon">◉</span>
+
+              <span className="capability-icon">
+                ◉
+              </span>
 
               <div>
-                <strong>TECH SUPPORT</strong>
-                <small>Reliable Help</small>
+                <strong>
+                  TECH SUPPORT
+                </strong>
+
+                <small>
+                  Reliable Help
+                </small>
               </div>
+
             </div>
 
           </div>
@@ -135,6 +171,7 @@ function Hero({
         </div>
 
       </div>
+
     </section>
   )
 }

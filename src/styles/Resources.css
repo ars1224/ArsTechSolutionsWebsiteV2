@@ -1,0 +1,444 @@
+/* =========================
+   HERO
+========================= */
+
+.resources-hero {
+    padding: 110px 24px 90px;
+
+    background:
+        radial-gradient(
+            circle at 80% 20%,
+            rgba(79, 140, 255, 0.08),
+            transparent 35%
+        ),
+        var(--bg-primary);
+}
+
+
+.resources-hero-container {
+    max-width: 1240px;
+
+    margin: 0 auto;
+}
+
+
+.resources-eyebrow {
+    margin: 0 0 18px;
+
+    color: var(--accent);
+
+    font-family: 'Manrope', sans-serif;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    letter-spacing: 0.14em;
+
+    text-transform: uppercase;
+}
+
+
+.resources-hero h1 {
+    max-width: 970px;
+
+    margin: 0;
+
+    color: var(--text-primary);
+
+    font-family: 'Manrope', sans-serif;
+
+    font-size: clamp(48px, 7vw, 82px);
+
+    font-weight: 750;
+
+    line-height: 1;
+
+    letter-spacing: -0.045em;
+}
+
+
+.resources-hero h1 span {
+    color: var(--accent);
+}
+
+
+.resources-intro {
+    max-width: 730px;
+
+    margin: 30px 0 0;
+
+    color: var(--text-secondary);
+
+    font-family: 'Inter', sans-serif;
+
+    font-size: 18px;
+
+    line-height: 1.75;
+}
+
+
+/* =========================
+   RESOURCES
+========================= */
+
+.resources-section {
+    padding: 20px 24px 110px;
+
+    background: var(--bg-primary);
+}
+
+
+.resources-container {
+    max-width: 1240px;
+
+    margin: 0 auto;
+}
+
+
+.resources-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 24px;
+}
+
+
+/* =========================
+   RESOURCE CARD
+========================= */
+
+.resource-card {
+    min-height: 500px;
+
+    padding: 38px;
+
+    display: flex;
+    flex-direction: column;
+
+    background: var(--bg-secondary);
+
+    border: 1px solid var(--border-color);
+
+    border-radius: 18px;
+
+    transition:
+        transform 0.25s ease,
+        background-color 0.25s ease,
+        border-color 0.25s ease;
+}
+
+
+.resource-card:hover {
+    transform: translateY(-4px);
+
+    background: var(--bg-elevated);
+
+    border-color: #414a55;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.resource-card-header {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+
+.resource-number {
+    color: var(--accent);
+
+    font-family: 'Manrope', sans-serif;
+
+    font-size: 13px;
+    font-weight: 700;
+}
+
+
+.resource-category {
+    padding: 7px 11px;
+
+    background: rgba(79, 140, 255, 0.08);
+
+    border-radius: 50px;
+
+    color: var(--accent);
+
+    font-family: 'Inter', sans-serif;
+
+    font-size: 11px;
+    font-weight: 600;
+}
+
+
+/* =========================
+   CONTENT
+========================= */
+
+.resource-card-content {
+    margin-top: 52px;
+}
+
+
+.resource-card-content h2 {
+    margin: 0;
+
+    color: var(--text-primary);
+
+    font-family: 'Manrope', sans-serif;
+
+    font-size: clamp(26px, 3vw, 34px);
+
+    line-height: 1.2;
+
+    letter-spacing: -0.025em;
+}
+
+
+.resource-card-content p {
+    margin: 18px 0 0;
+
+    color: var(--text-secondary);
+
+    font-family: 'Inter', sans-serif;
+
+    font-size: 15px;
+
+    line-height: 1.75;
+}
+
+
+/* =========================
+   POINTS
+========================= */
+
+.resource-points {
+    margin: auto 0 0;
+
+    padding: 34px 0 0;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+
+    list-style: none;
+}
+
+
+.resource-points li {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 10px;
+
+    color: var(--text-secondary);
+
+    font-family: 'Inter', sans-serif;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+}
+
+
+.resource-points li span {
+    color: var(--accent);
+
+    font-weight: 700;
+}
+
+
+/* =========================
+   NOTE
+========================= */
+
+.resources-note {
+    padding: 90px 24px;
+
+    background: var(--bg-secondary);
+}
+
+
+.resources-note-container {
+    max-width: 1240px;
+
+    margin: 0 auto;
+}
+
+
+.resources-note h2 {
+    max-width: 720px;
+
+    margin: 0;
+
+    color: var(--text-primary);
+
+    font-family: 'Manrope', sans-serif;
+
+    font-size: clamp(34px, 4vw, 50px);
+
+    line-height: 1.15;
+
+    letter-spacing: -0.03em;
+}
+
+
+.resources-note-container > p:last-child {
+    max-width: 660px;
+
+    margin: 20px 0 0;
+
+    color: var(--text-secondary);
+
+    font-family: 'Inter', sans-serif;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================
+   CTA
+========================= */
+
+.resources-cta {
+    padding: 100px 24px;
+
+    background: var(--bg-primary);
+}
+
+
+.resources-cta-container {
+    max-width: 1240px;
+
+    margin: 0 auto;
+
+    display: flex;
+
+    align-items: flex-end;
+    justify-content: space-between;
+
+    gap: 50px;
+}
+
+
+.resources-cta-container h2 {
+    max-width: 700px;
+
+    margin: 0;
+
+    color: var(--text-primary);
+
+    font-family: 'Manrope', sans-serif;
+
+    font-size: clamp(34px, 4vw, 50px);
+
+    line-height: 1.15;
+
+    letter-spacing: -0.03em;
+}
+
+
+.resources-cta-description {
+    max-width: 620px;
+
+    margin: 20px 0 0;
+
+    color: var(--text-secondary);
+
+    font-family: 'Inter', sans-serif;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+    .resources-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .resources-cta-container {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 576px) {
+
+    .resources-hero {
+        padding: 70px 20px 60px;
+    }
+
+
+    .resources-hero h1 {
+        font-size: clamp(42px, 12vw, 58px);
+    }
+
+
+    .resources-intro {
+        font-size: 16px;
+    }
+
+
+    .resources-section {
+        padding: 10px 20px 80px;
+    }
+
+
+    .resource-card {
+        min-height: auto;
+
+        padding: 28px;
+    }
+
+
+    .resource-card-content {
+        margin-top: 42px;
+    }
+
+
+    .resource-points {
+        margin-top: 34px;
+    }
+
+
+    .resources-note {
+        padding: 70px 20px;
+    }
+
+
+    .resources-cta {
+        padding: 70px 20px;
+    }
+
+
+    .resources-cta-container .ars-button {
+        width: 100%;
+    }
+
+}

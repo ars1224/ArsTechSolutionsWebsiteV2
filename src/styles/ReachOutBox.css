@@ -1,0 +1,379 @@
+.reach-out-section {
+    padding: 110px 24px;
+
+    background: var(--bg-primary);
+}
+
+
+.reach-out-container {
+    max-width: 1240px;
+
+    margin: 0 auto;
+}
+
+
+/* =========================
+   MAIN BOX
+========================= */
+
+.reach-out-box {
+    overflow: hidden;
+
+    display: grid;
+
+    grid-template-columns: 0.85fr 1.15fr;
+
+    background: var(--bg-secondary);
+
+    border: 1px solid var(--border-color);
+
+    border-radius: 22px;
+}
+
+
+/* =========================
+   LEFT SIDE
+========================= */
+
+.reach-out-info {
+    padding: 60px;
+
+    display: flex;
+    flex-direction: column;
+
+    background:
+        radial-gradient(
+            circle at 0% 0%,
+            rgba(79, 140, 255, 0.13),
+            transparent 45%
+        ),
+        var(--bg-elevated);
+}
+
+
+.reach-out-eyebrow {
+    margin: 0 0 14px;
+
+    color: var(--accent);
+
+    font-family: 'Manrope', sans-serif;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    letter-spacing: 0.12em;
+
+    text-transform: uppercase;
+}
+
+
+.reach-out-info h2 {
+    max-width: 480px;
+
+    margin: 0;
+
+    color: var(--text-primary);
+
+    font-family: 'Manrope', sans-serif;
+
+    font-size: clamp(34px, 4vw, 50px);
+
+    font-weight: 700;
+
+    line-height: 1.1;
+
+    letter-spacing: -0.03em;
+}
+
+
+.reach-out-description {
+    max-width: 500px;
+
+    margin: 24px 0 0;
+
+    color: var(--text-secondary);
+
+    font-family: 'Inter', sans-serif;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================
+   CONTACT DETAILS
+========================= */
+
+.reach-out-contact-list {
+    margin-top: 48px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 26px;
+}
+
+
+.reach-out-contact {
+    display: flex;
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+
+.reach-out-contact-label {
+    color: #7e8792;
+
+    font-family: 'Manrope', sans-serif;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 0.1em;
+
+    text-transform: uppercase;
+}
+
+
+.reach-out-contact a,
+.reach-out-contact > span:last-child {
+    color: var(--text-primary);
+
+    font-family: 'Inter', sans-serif;
+
+    font-size: 15px;
+
+    text-decoration: none;
+}
+
+
+.reach-out-contact a:hover {
+    color: var(--accent);
+}
+
+
+/* =========================
+   AVAILABILITY NOTE
+========================= */
+
+.reach-out-note {
+    margin-top: auto;
+
+    padding-top: 48px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+}
+
+
+.reach-out-note-dot {
+    width: 8px;
+    height: 8px;
+
+    flex-shrink: 0;
+
+    background: #63d98b;
+
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 0 4px rgba(99, 217, 139, 0.1);
+}
+
+
+.reach-out-note p {
+    margin: 0;
+
+    color: var(--text-secondary);
+
+    font-family: 'Inter', sans-serif;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   FORM
+========================= */
+
+.reach-out-form {
+    padding: 60px;
+}
+
+
+.reach-out-form-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 26px 20px;
+}
+
+
+.reach-out-full {
+    grid-column: 1 / -1;
+}
+
+
+/* =========================
+   FORM FOOTER
+========================= */
+
+.reach-out-form-footer {
+    margin-top: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 24px;
+}
+
+
+.reach-out-form-footer p {
+    max-width: 310px;
+
+    margin: 0;
+
+    color: #7e8792;
+
+    font-family: 'Inter', sans-serif;
+
+    font-size: 12px;
+
+    line-height: 1.6;
+}
+
+/* =========================
+   SUBMISSION STATUS
+========================= */
+
+.reach-out-status {
+    margin-top: 24px;
+
+    padding: 16px 18px;
+
+    border-radius: 9px;
+
+    font-family: 'Inter', sans-serif;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+
+.reach-out-status--success {
+    background: rgba(99, 217, 139, 0.08);
+
+    border: 1px solid rgba(99, 217, 139, 0.35);
+
+    color: #8ee7ac;
+}
+
+
+.reach-out-status--error {
+    background: rgba(255, 100, 100, 0.08);
+
+    border: 1px solid rgba(255, 100, 100, 0.35);
+
+    color: #ff8b8b;
+}
+
+
+.reach-out-status--error a {
+    color: inherit;
+
+    font-weight: 700;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 991.98px) {
+
+    .reach-out-box {
+        grid-template-columns: 1fr;
+    }
+
+
+    .reach-out-info {
+        padding: 50px 40px;
+    }
+
+
+    .reach-out-note {
+        margin-top: 40px;
+
+        padding-top: 0;
+    }
+
+
+    .reach-out-form {
+        padding: 50px 40px;
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 576px) {
+
+    .reach-out-section {
+        padding: 70px 20px;
+    }
+
+
+    .reach-out-box {
+        border-radius: 16px;
+    }
+
+
+    .reach-out-info {
+        padding: 36px 24px;
+    }
+
+
+    .reach-out-form {
+        padding: 36px 24px;
+    }
+
+
+    .reach-out-form-grid {
+        grid-template-columns: 1fr;
+
+        gap: 22px;
+    }
+
+
+    .reach-out-full {
+        grid-column: auto;
+    }
+
+
+    .reach-out-form-footer {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+
+    .reach-out-form-footer p {
+        max-width: none;
+    }
+
+
+    .reach-out-form-footer .ars-button {
+        width: 100%;
+    }
+
+}
+
