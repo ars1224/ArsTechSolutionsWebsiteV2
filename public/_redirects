@@ -1,3 +1,4 @@
-<BrowserRouter>
-
-/*    /index.html    200
+# ARS Tech Solutions Website V2
+# vite-react-ssg generates real static pages.
+# Do NOT use the old SPA catch-all:
+# /* /index.html 200

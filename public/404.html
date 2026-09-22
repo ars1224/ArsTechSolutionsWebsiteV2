@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en-NZ">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+
+    <meta
+      name="robots"
+      content="noindex, nofollow"
+    />
+
+    <meta
+      name="theme-color"
+      content="#07111f"
+    />
+
+    <title>Page Not Found | ARS Tech Solutions</title>
+
+    <style>
+      :root {
+        font-family:
+          Inter,
+          system-ui,
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          sans-serif;
+
+        background: #07111f;
+        color: #ffffff;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        background:
+          radial-gradient(
+            circle at top right,
+            rgba(47, 128, 237, 0.15),
+            transparent 35rem
+          ),
+          #07111f;
+      }
+
+      .not-found {
+        width: min(720px, calc(100% - 40px));
+
+        padding: 80px 0;
+      }
+
+      .brand {
+        margin-bottom: 40px;
+
+        color: #66a8ff;
+
+        font-size: 0.9rem;
+        font-weight: 700;
+
+        letter-spacing: 0.12em;
+
+        text-transform: uppercase;
+      }
+
+      .error-code {
+        margin: 0;
+
+        font-size: clamp(5rem, 15vw, 9rem);
+        font-weight: 800;
+
+        line-height: 0.9;
+
+        letter-spacing: -0.06em;
+      }
+
+      h1 {
+        margin: 20px 0 0;
+
+        font-size: clamp(2rem, 6vw, 3.5rem);
+
+        line-height: 1.05;
+
+        letter-spacing: -0.04em;
+      }
+
+      .description {
+        max-width: 580px;
+
+        margin-top: 24px;
+
+        color: #aeb8c5;
+
+        font-size: 1.05rem;
+
+        line-height: 1.7;
+      }
+
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+
+        gap: 12px;
+
+        margin-top: 36px;
+      }
+
+      .button {
+        min-height: 48px;
+
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+
+        padding: 0 22px;
+
+        border-radius: 8px;
+
+        font-weight: 700;
+
+        text-decoration: none;
+      }
+
+      .button-primary {
+        background: #2f80ed;
+        color: white;
+
+        border: 1px solid #2f80ed;
+      }
+
+      .button-secondary {
+        background: transparent;
+
+        color: white;
+
+        border: 1px solid #3b4756;
+      }
+
+      .button:hover {
+        transform: translateY(-1px);
+      }
+
+      .button:focus-visible {
+        outline: 3px solid #8fc0ff;
+
+        outline-offset: 3px;
+      }
+
+      .links {
+        display: flex;
+        flex-wrap: wrap;
+
+        gap: 18px;
+
+        margin-top: 36px;
+        padding-top: 28px;
+
+        border-top: 1px solid #202b38;
+      }
+
+      .links a {
+        color: #9dc6ff;
+
+        text-decoration: none;
+      }
+
+      .links a:hover {
+        color: white;
+      }
+    </style>
+  </head>
+
+  <body>
+    <main class="not-found">
+      <p class="brand">
+        ARS Tech Solutions
+      </p>
+
+      <p
+        class="error-code"
+        aria-hidden="true"
+      >
+        404
+      </p>
+
+      <h1>
+        This page couldn’t be found.
+      </h1>
+
+      <p class="description">
+        The page may have moved, the address may be incorrect,
+        or the link may no longer exist.
+        You can return to the homepage or continue exploring
+        ARS Tech Solutions.
+      </p>
+
+      <div class="actions">
+        <a
+          href="/"
+          class="button button-primary"
+        >
+          Back to Home
+        </a>
+
+        <a
+          href="/contact"
+          class="button button-secondary"
+        >
+          Contact ARS
+        </a>
+      </div>
+
+      <nav
+        class="links"
+        aria-label="Helpful links"
+      >
+        <a href="/services">
+          Services
+        </a>
+
+        <a href="/solutions">
+          Solutions
+        </a>
+
+        <a href="/work">
+          Work
+        </a>
+
+        <a href="/resources">
+          Resources
+        </a>
+      </nav>
+    </main>
+  </body>
+</html>
