@@ -1,0 +1,479 @@
+.canterbury-page {
+    background: var(--bg-primary);
+
+    color: var(--text-primary);
+}
+
+
+/* =========================
+   SHARED CONTAINER
+========================= */
+
+.canterbury-content-container,
+.canterbury-hero .container {
+    width: 100%;
+
+    max-width: 1240px;
+
+    margin: 0 auto;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.canterbury-hero {
+    padding: 100px 24px 90px;
+
+    border-bottom: 1px solid var(--border-color);
+}
+
+
+.canterbury-eyebrow {
+    margin: 0 0 18px;
+
+    color: var(--accent);
+
+    font-family: 'Manrope Variable', sans-serif;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.12em;
+
+    text-transform: uppercase;
+}
+
+
+.canterbury-hero h1 {
+    max-width: 1050px;
+
+    margin: 0;
+
+    color: var(--text-primary);
+
+    font-family: 'Manrope Variable', sans-serif;
+
+    font-size: clamp(40px, 5vw, 64px);
+
+    line-height: 1.08;
+
+    letter-spacing: -0.03em;
+}
+
+
+.canterbury-hero > .container > p:not(.canterbury-eyebrow) {
+    max-width: 850px;
+
+    margin: 28px 0 32px;
+
+    color: var(--text-secondary);
+
+    font-family: 'Inter Variable', sans-serif;
+
+    font-size: 18px;
+
+    line-height: 1.75;
+}
+
+
+/* =========================
+   GENERAL SECTIONS
+========================= */
+
+.canterbury-local,
+.canterbury-areas,
+.canterbury-services,
+.canterbury-remote {
+    padding: 100px 24px;
+
+    border-bottom: 1px solid var(--border-color);
+}
+
+
+.canterbury-local,
+.canterbury-remote {
+    background: var(--bg-primary);
+}
+
+.canterbury-about-link {
+    margin-top: 24px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    color: var(--text-primary);
+
+    font-family: 'Manrope Variable', sans-serif;
+
+    font-weight: 700;
+
+    text-decoration: none;
+}
+
+
+.canterbury-about-link span {
+    color: var(--accent);
+
+    transition: transform 0.2s ease;
+}
+
+
+.canterbury-about-link:hover {
+    color: var(--accent);
+}
+
+
+.canterbury-about-link:hover span {
+    transform: translateX(4px);
+}
+
+.canterbury-areas,
+.canterbury-services {
+    background: var(--bg-secondary);
+}
+
+
+.canterbury-section-heading {
+    max-width: 820px;
+
+    margin-bottom: 52px;
+}
+
+
+.canterbury-section-heading h2,
+.canterbury-remote h2 {
+    margin: 0;
+
+    color: var(--text-primary);
+
+    font-family: 'Manrope Variable', sans-serif;
+
+    font-size: clamp(32px, 4vw, 48px);
+
+    line-height: 1.15;
+
+    letter-spacing: -0.025em;
+}
+
+
+.canterbury-section-heading > p:not(.canterbury-eyebrow),
+.canterbury-remote-copy p {
+    margin: 22px 0 0;
+
+    color: var(--text-secondary);
+
+    font-family: 'Inter Variable', sans-serif;
+
+    font-size: 17px;
+
+    line-height: 1.75;
+}
+
+
+/* =========================
+   LOCATION CARDS
+========================= */
+
+.canterbury-area-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 24px;
+}
+
+
+.canterbury-area-card {
+    min-height: 330px;
+
+    padding: 34px;
+
+    position: relative;
+
+    background: var(--bg-elevated);
+
+    border: 1px solid var(--border-color);
+
+    border-radius: 16px;
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        background-color 0.2s ease;
+}
+
+
+.canterbury-area-card:hover {
+    transform: translateY(-4px);
+
+    border-color: rgba(79, 140, 255, 0.55);
+}
+
+
+.canterbury-area-number {
+    display: block;
+
+    margin-bottom: 48px;
+
+    color: var(--accent);
+
+    font-family: 'Manrope Variable', sans-serif;
+
+    font-size: 13px;
+
+    font-weight: 700;
+}
+
+
+.canterbury-area-card h3 {
+    margin: 0;
+
+    color: var(--text-primary);
+
+    font-family: 'Manrope Variable', sans-serif;
+
+    font-size: 28px;
+
+    line-height: 1.2;
+}
+
+
+.canterbury-area-card p {
+    margin: 18px 0 0;
+
+    color: var(--text-secondary);
+
+    font-family: 'Inter Variable', sans-serif;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================
+   SERVICE LINKS
+========================= */
+
+.canterbury-service-links {
+    display: grid;
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    border-top: 1px solid var(--border-color);
+}
+
+
+.canterbury-service-links a {
+    min-height: 82px;
+
+    padding: 24px 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    color: var(--text-primary);
+
+    font-family: 'Manrope Variable', sans-serif;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    text-decoration: none;
+
+    border-bottom: 1px solid var(--border-color);
+
+    transition:
+        color 0.2s ease,
+        background-color 0.2s ease,
+        padding-left 0.2s ease;
+}
+
+
+.canterbury-service-links a:hover {
+    padding-left: 25px;
+
+    color: var(--accent);
+
+    background: var(--bg-elevated);
+}
+
+
+.canterbury-service-links span {
+    flex-shrink: 0;
+
+    color: var(--accent);
+
+    font-size: 18px;
+
+    transition: transform 0.2s ease;
+}
+
+
+.canterbury-service-links a:hover span {
+    transform: translateX(4px);
+}
+
+
+.canterbury-service-links a:focus-visible {
+    outline: 3px solid var(--accent);
+
+    outline-offset: -3px;
+}
+
+
+/* =========================
+   REMOTE / NATIONWIDE
+========================= */
+
+.canterbury-remote-layout {
+    display: grid;
+
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+
+    gap: 90px;
+
+    align-items: start;
+}
+
+
+.canterbury-remote-copy {
+    max-width: 590px;
+}
+
+
+.canterbury-remote-copy p:first-child {
+    margin-top: 0;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+    .canterbury-hero {
+        padding: 85px 24px 75px;
+    }
+
+
+    .canterbury-local,
+    .canterbury-areas,
+    .canterbury-services,
+    .canterbury-remote {
+        padding: 80px 24px;
+    }
+
+
+    .canterbury-area-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+
+    .canterbury-service-links {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+
+    .canterbury-remote-layout {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .canterbury-hero {
+        padding: 65px 20px 60px;
+    }
+
+
+    .canterbury-hero h1 {
+        font-size: clamp(36px, 11vw, 48px);
+
+        line-height: 1.05;
+    }
+
+
+    .canterbury-hero > .container > p:not(.canterbury-eyebrow) {
+        margin: 24px 0 28px;
+
+        font-size: 16px;
+    }
+
+
+    .canterbury-local,
+    .canterbury-areas,
+    .canterbury-services,
+    .canterbury-remote {
+        padding: 65px 20px;
+    }
+
+
+    .canterbury-section-heading {
+        margin-bottom: 36px;
+    }
+
+
+    .canterbury-section-heading h2,
+    .canterbury-remote h2 {
+        font-size: 34px;
+    }
+
+
+    .canterbury-section-heading > p:not(.canterbury-eyebrow),
+    .canterbury-remote-copy p {
+        font-size: 16px;
+    }
+
+
+    .canterbury-area-grid,
+    .canterbury-service-links {
+        grid-template-columns: 1fr;
+    }
+
+
+    .canterbury-area-card {
+        min-height: auto;
+
+        padding: 28px;
+    }
+
+
+    .canterbury-area-number {
+        margin-bottom: 34px;
+    }
+
+
+    .canterbury-service-links a {
+        min-height: 72px;
+
+        padding: 20px 4px;
+    }
+
+
+    .canterbury-service-links a:hover {
+        padding-left: 8px;
+    }
+
+}

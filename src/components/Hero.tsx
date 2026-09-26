@@ -2,18 +2,21 @@ import Button from './Button'
 import '../styles/Hero.css'
 
 type HeroProps = {
-  eyebrow?: string
+  eyebrow: string
   title: string
-  highlightedText?: string
-  description?: string
+  highlightedText: string
+  description: string
 
-  primaryText?: string
-  primaryLink?: string
+  primaryText: string
+  primaryLink: string
 
-  secondaryText?: string
-  secondaryLink?: string
+  secondaryText: string
+  secondaryLink: string
 
-  image?: string
+  image: string
+
+  avifSrcSet?: string
+  webpSrcSet?: string
 }
 
 function Hero({
@@ -25,28 +28,49 @@ function Hero({
   primaryLink,
   secondaryText,
   secondaryLink,
-  image
+  image,
+  avifSrcSet,
+  webpSrcSet
 }: HeroProps) {
   return (
-    <section
-      className="hero"
-      style={
-        image
-          ? {
-              backgroundImage: `
-                linear-gradient(
-                  90deg,
-                  rgba(6, 9, 14, 0.98) 0%,
-                  rgba(6, 9, 14, 0.90) 34%,
-                  rgba(6, 9, 14, 0.35) 62%,
-                  rgba(6, 9, 14, 0.08) 100%
-                ),
-                url(${image})
-              `
-            }
-          : undefined
-      }
-    >
+    <section className="hero">
+
+      <picture
+        className="hero-media"
+        aria-hidden="true"
+      >
+        {avifSrcSet && (
+          <source
+            type="image/avif"
+            srcSet={avifSrcSet}
+            sizes="100vw"
+          />
+        )}
+
+        {webpSrcSet && (
+          <source
+            type="image/webp"
+            srcSet={webpSrcSet}
+            sizes="100vw"
+          />
+        )}
+
+      <img
+        src={image}
+        alt=""
+        width={1440}
+        height={810}
+        sizes="100vw"
+        fetchPriority="high"
+        loading="eager"
+        className="hero-media-image"
+      />
+      </picture>
+
+      <div
+        className="hero-overlay"
+        aria-hidden="true"
+      />
       <div className="container hero-container">
 
         <div className="hero-content">

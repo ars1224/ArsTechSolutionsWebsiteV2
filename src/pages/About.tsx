@@ -3,6 +3,15 @@ import Button from '../components/Button'
 import '../styles/About.css'
 import PageMeta from '../components/PageMeta'
 
+import Partners from '../components/Partners'
+
+import StructuredData from '../components/StructuredData'
+
+
+import {
+  createBreadcrumbSchema
+} from '../data/structuredData'
+
 
 function About() {
 
@@ -64,12 +73,20 @@ function About() {
 
   return (
     <>
-    <PageMeta
-  title="Digital Solutions for New Zealand Businesses"
-  description="Practical digital solutions for businesses that need stronger websites, better customer journeys, custom web systems, improved visibility or technology support."
-  path="/solutions"
-/>
+        <PageMeta
+          title="About ARS Tech Solutions"
+          description="Learn about ARS Tech Solutions, a New Zealand digital solutions business helping businesses build stronger websites, web applications and practical technology solutions."
+          path="/about"
+        />
 
+        <StructuredData
+          data={
+            createBreadcrumbSchema(
+              'About',
+              '/about'
+            )
+          }
+        />
       {/* =========================
           HERO
       ========================= */}
@@ -97,6 +114,9 @@ function About() {
         </div>
 
       </section>
+
+      <Partners compact />
+
 
 
       {/* =========================

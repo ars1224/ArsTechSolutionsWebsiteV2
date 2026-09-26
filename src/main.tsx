@@ -1,10 +1,12 @@
 import { ViteReactSSG } from 'vite-react-ssg'
 
-import 'bootstrap/dist/css/bootstrap.min.css'
+import '@fontsource-variable/inter'
+import '@fontsource-variable/manrope'
+
+import './styles/bootstrap-lite.css'
 import './styles/index.css'
 
 import { routes } from './App'
-
 
 export const createRoot = ViteReactSSG(
   {
@@ -15,7 +17,7 @@ export const createRoot = ViteReactSSG(
   ({ isClient }) => {
 
     if (isClient) {
-      import('bootstrap')
+        import('bootstrap/js/dist/offcanvas')
     }
 
   }

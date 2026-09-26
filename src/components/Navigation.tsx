@@ -4,6 +4,17 @@ import '../styles/Navigation.css'
 import Button from './Button'
 
 function Navigation() {
+
+  const closeMobileNavigation = () => {
+    window.setTimeout(() => {
+      const closeButton = document.querySelector<HTMLButtonElement>(
+        '#mobileNavigation .btn-close'
+      )
+
+      closeButton?.click()
+    }, 0)
+  }
+
   return (
     <>
       <header className="site-header">
@@ -20,6 +31,7 @@ function Navigation() {
                 data-bs-toggle="offcanvas"
                 data-bs-target="#mobileNavigation"
                 aria-controls="mobileNavigation"
+                aria-expanded="false"
                 aria-label="Open navigation menu"
               >
                 <span className="navbar-toggler-icon"></span>
@@ -107,7 +119,7 @@ function Navigation() {
       </header>
 
 
-      {/* Mobile Navigation - OUTSIDE HEADER */}
+      {/* Mobile Navigation */}
       <div
         className="offcanvas offcanvas-start mobile-offcanvas"
         tabIndex={-1}
@@ -120,7 +132,7 @@ function Navigation() {
           <NavLink
             to="/"
             className="offcanvas-brand"
-            data-bs-dismiss="offcanvas"
+            onClick={closeMobileNavigation}
             aria-label="ARS Tech Solutions home"
           >
             <img
@@ -137,6 +149,7 @@ function Navigation() {
             Mobile Navigation
           </span>
 
+          {/* Only the actual close button uses data-bs-dismiss */}
           <button
             type="button"
             className="btn-close btn-close-white"
@@ -154,7 +167,7 @@ function Navigation() {
             <li>
               <NavLink
                 to="/"
-                data-bs-dismiss="offcanvas"
+                onClick={closeMobileNavigation}
               >
                 Home
               </NavLink>
@@ -163,7 +176,7 @@ function Navigation() {
             <li>
               <NavLink
                 to="/services"
-                data-bs-dismiss="offcanvas"
+                onClick={closeMobileNavigation}
               >
                 Services
               </NavLink>
@@ -172,7 +185,7 @@ function Navigation() {
             <li>
               <NavLink
                 to="/solutions"
-                data-bs-dismiss="offcanvas"
+                onClick={closeMobileNavigation}
               >
                 Solutions
               </NavLink>
@@ -181,7 +194,7 @@ function Navigation() {
             <li>
               <NavLink
                 to="/work"
-                data-bs-dismiss="offcanvas"
+                onClick={closeMobileNavigation}
               >
                 Work
               </NavLink>
@@ -190,7 +203,7 @@ function Navigation() {
             <li>
               <NavLink
                 to="/resources"
-                data-bs-dismiss="offcanvas"
+                onClick={closeMobileNavigation}
               >
                 Resources
               </NavLink>
@@ -199,7 +212,7 @@ function Navigation() {
             <li>
               <NavLink
                 to="/about"
-                data-bs-dismiss="offcanvas"
+                onClick={closeMobileNavigation}
               >
                 About
               </NavLink>
@@ -208,7 +221,7 @@ function Navigation() {
             <li>
               <NavLink
                 to="/contact"
-                data-bs-dismiss="offcanvas"
+                onClick={closeMobileNavigation}
               >
                 Contact
               </NavLink>
@@ -220,7 +233,7 @@ function Navigation() {
           <NavLink
             to="/contact"
             className="btn nav-cta mobile-cta"
-            data-bs-dismiss="offcanvas"
+            onClick={closeMobileNavigation}
           >
             Request a Quote
           </NavLink>

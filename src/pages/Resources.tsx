@@ -2,81 +2,102 @@ import Button from '../components/Button'
 
 import '../styles/Resources.css'
 import PageMeta from '../components/PageMeta'
+import StructuredData from '../components/StructuredData'
+import { NavLink } from 'react-router-dom'
+
+import Partners from '../components/Partners'
+import {
+  createBreadcrumbSchema
+} from '../data/structuredData'
 
 
 function Resources() {
 
-  const resources = [
-    {
-      number: '01',
-      category: 'Website Planning',
-      title: 'What should a business website include?',
-      description:
-        'A good business website should make it easy for visitors to understand who you are, what you offer and what they should do next.',
-      points: [
-        'Clear homepage message',
-        'Services or solutions',
-        'About your business',
-        'Trust and credibility information',
-        'Simple contact options',
-        'Strong calls to action'
-      ]
-    },
-    {
-      number: '02',
-      category: 'Website Redesign',
-      title: 'When is it time to redesign your website?',
-      description:
-        'A website does not need a redesign just because it is old. The stronger reason is when it no longer supports your business or creates a poor experience for visitors.',
-      points: [
-        'Difficult to use on mobile',
-        'Outdated information',
-        'Confusing navigation',
-        'Weak calls to action',
-        'Slow loading',
-        'Does not represent the business anymore'
-      ]
-    },
-    {
-      number: '03',
-      category: 'SEO & Performance',
-      title: 'The foundations of a search-friendly website',
-      description:
-        'SEO starts with a website that is structured properly, loads efficiently and clearly explains what the business provides.',
-      points: [
-        'Clear page titles',
-        'Useful page content',
-        'Logical heading structure',
-        'Mobile responsiveness',
-        'Good website performance',
-        'Descriptive metadata'
-      ]
-    },
-    {
-      number: '04',
-      category: 'Web Solutions',
-      title: 'Website or custom web application?',
-      description:
-        'A website mainly presents information and helps customers discover your business. A web application usually performs tasks, manages data or supports a workflow.',
-      points: [
-        'Website: marketing and information',
-        'Website: services and enquiries',
-        'Web app: user accounts',
-        'Web app: dashboards',
-        'Web app: data management',
-        'Web app: business workflows'
-      ]
-    }
-  ]
+const resources = [
+  {
+    number: '01',
+    category: 'Website Planning',
+    title: 'What should a business website include?',
+    href: '/resources/what-should-a-business-website-include',
+    description:
+      'A good business website should make it easy for visitors to understand who you are, what you offer and what they should do next.',
+    points: [
+      'Clear homepage message',
+      'Services or solutions',
+      'About your business',
+      'Trust and credibility information',
+      'Simple contact options',
+      'Strong calls to action'
+    ]
+  },
 
+  {
+    number: '02',
+    category: 'Website Redesign',
+    title: 'When is it time to redesign your website?',
+    href: '/resources/when-is-it-time-to-redesign-your-website',
+    description:
+      'A website does not need a redesign just because it is old. The stronger reason is when it no longer supports your business or creates a poor experience for visitors.',
+    points: [
+      'Difficult to use on mobile',
+      'Outdated information',
+      'Confusing navigation',
+      'Weak calls to action',
+      'Slow loading',
+      'Does not represent the business anymore'
+    ]
+  },
+
+  {
+    number: '03',
+    category: 'SEO & Performance',
+    title: 'The foundations of a search-friendly website',
+    href: '/resources/seo-foundations-small-business-website',
+    description:
+      'SEO starts with a website that is structured properly, loads efficiently and clearly explains what the business provides.',
+    points: [
+      'Clear page titles',
+      'Useful page content',
+      'Logical heading structure',
+      'Mobile responsiveness',
+      'Good website performance',
+      'Descriptive metadata'
+    ]
+  },
+
+  {
+    number: '04',
+    category: 'Web Solutions',
+    title: 'Website or custom web application?',
+    href: '/resources/website-vs-web-app',
+    description:
+      'A website mainly presents information and helps customers discover your business. A web application usually performs tasks, manages data or supports a workflow.',
+    points: [
+      'Website: marketing and information',
+      'Website: services and enquiries',
+      'Web app: user accounts',
+      'Web app: dashboards',
+      'Web app: data management',
+      'Web app: business workflows'
+    ]
+  }
+]
 
   return (
     <>
-<PageMeta
-  title="Digital Solutions for New Zealand Businesses"
-  description="Practical digital solutions for businesses that need stronger websites, better customer journeys, custom web systems, improved visibility or technology support."
-  path="/solutions"
-/>
+        <PageMeta
+          title="Website, SEO & Digital Resources"
+          description="Practical website, SEO, web development and digital guidance for New Zealand businesses from ARS Tech Solutions."
+          path="/resources"
+        />
+        <StructuredData
+          data={
+            createBreadcrumbSchema(
+              'Resources',
+              '/resources'
+            )
+          }
+        />
       {/* =========================
           HERO
       ========================= */}
@@ -104,6 +125,8 @@ function Resources() {
         </div>
 
       </section>
+
+      <Partners compact/>
 
 
       {/* =========================
@@ -163,7 +186,17 @@ function Resources() {
 
                 </ul>
 
-              </article>
+
+                <NavLink
+                  to={resource.href}
+                  className="resource-card-link"
+                >
+                  Read the guide
+                  <span aria-hidden="true">→</span>
+                </NavLink>
+
+
+                </article>
 
             ))}
 

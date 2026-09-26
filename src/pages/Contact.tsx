@@ -2,16 +2,32 @@ import ReachOutBox from '../components/ReachOutBox'
 
 import '../styles/Contact.css'
 import PageMeta from '../components/PageMeta'
+import StructuredData from '../components/StructuredData'
+
+
+
+import {
+  createBreadcrumbSchema
+} from '../data/structuredData'
 
 
 function Contact() {
   return (
     <>
-    <PageMeta
-  title="Digital Solutions for New Zealand Businesses"
-  description="Practical digital solutions for businesses that need stronger websites, better customer journeys, custom web systems, improved visibility or technology support."
-  path="/solutions"
-/>
+        <PageMeta
+          title="Contact ARS Tech Solutions"
+          description="Contact ARS Tech Solutions to discuss a website, redesign, custom web application, SEO, e-commerce project or practical technology support."
+          path="/contact"
+        />
+
+        <StructuredData
+          data={
+            createBreadcrumbSchema(
+              'Contact',
+              '/contact'
+            )
+          }
+        />
 
       {/* =========================
           CONTACT INTRO
@@ -50,6 +66,7 @@ function Contact() {
       ========================= */}
 
       <ReachOutBox />
+
 
     </>
   )

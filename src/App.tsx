@@ -1,18 +1,12 @@
 import type { RouteRecord } from 'vite-react-ssg'
 
 import Layout from './components/Layout'
-
 import Home from './pages/Home'
-import Services from './pages/Services'
-import Solutions from './pages/Solutions'
-import Work from './pages/Work'
-import Resources from './pages/Resources'
-import About from './pages/About'
-import Contact from './pages/Contact'
-import Privacy from './pages/Privacy'
-import Terms from './pages/Terms'
-import NotFound from './pages/NotFound'
 
+import { services } from './data/services'
+import { resources } from './data/resources'
+
+import { projects } from './data/projects'
 
 export const routes: RouteRecord[] = [
   {
@@ -24,45 +18,126 @@ export const routes: RouteRecord[] = [
         index: true,
         element: <Home />
       },
+
       {
         path: 'services',
-        element: <Services />
+        lazy: async () => ({
+          Component: (await import('./pages/Services')).default
+        })
       },
+
       {
         path: 'solutions',
-        element: <Solutions />
+        lazy: async () => ({
+          Component: (await import('./pages/Solutions')).default
+        })
       },
+
       {
         path: 'work',
-        element: <Work />
+        lazy: async () => ({
+          Component: (await import('./pages/Work')).default
+        })
       },
+
       {
         path: 'resources',
-        element: <Resources />
+        lazy: async () => ({
+          Component: (await import('./pages/Resources')).default
+        })
       },
+
+      {
+        path: 'canterbury',
+        lazy: async () => ({
+          Component: (await import('./pages/Canterbury')).default
+        })
+      },
+
       {
         path: 'about',
-        element: <About />
+        lazy: async () => ({
+          Component: (await import('./pages/About')).default
+        })
       },
+
       {
         path: 'contact',
-        element: <Contact />
+        lazy: async () => ({
+          Component: (await import('./pages/Contact')).default
+        })
       },
+
       {
         path: 'privacy',
-        element: <Privacy />
+        lazy: async () => ({
+          Component: (await import('./pages/Privacy')).default
+        })
       },
+
       {
         path: 'terms',
-        element: <Terms />
+        lazy: async () => ({
+          Component: (await import('./pages/Terms')).default
+        })
       },
+
+      {
+        path: 'services/:slug',
+
+        lazy: async () => ({
+          Component: (
+            await import('./pages/ServiceDetail')
+          ).default
+        }),
+
+        getStaticPaths: () =>
+          services.map(
+            (service) =>
+              `services/${service.slug}`
+          )
+      },
+
+      {
+        path: 'resources/:slug',
+
+        lazy: async () => ({
+          Component: (
+            await import('./pages/ResourceDetail')
+          ).default
+        }),
+
+        getStaticPaths: () =>
+          resources.map(
+            (resource) =>
+              `resources/${resource.slug}`
+          )
+      },
+
       {
         path: '*',
-        element: <NotFound />
+        lazy: async () => ({
+          Component: (await import('./pages/NotFound')).default
+        })
+      },
+
+      {
+        path: 'work/:slug',
+
+        lazy: async () => ({
+          Component: (
+            await import('./pages/WorkDetail')
+          ).default
+        }),
+
+        getStaticPaths: () =>
+          projects.map(
+            (project) =>
+              `work/${project.slug}`
+          )
       }
     ]
   }
 ]
-
 
 export default routes

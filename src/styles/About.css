@@ -27,7 +27,7 @@
 
     color: var(--accent);
 
-    font-family: 'Manrope', sans-serif;
+    font-family: 'Manrope Variable', sans-serif;
 
     font-size: 13px;
     font-weight: 700;
@@ -45,7 +45,7 @@
 
     color: var(--text-primary);
 
-    font-family: 'Manrope', sans-serif;
+    font-family: 'Manrope Variable', sans-serif;
 
     font-size: clamp(48px, 7vw, 82px);
 
@@ -69,7 +69,7 @@
 
     color: var(--text-secondary);
 
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter Variable', sans-serif;
 
     font-size: 18px;
 
@@ -106,7 +106,7 @@
 
     color: var(--text-primary);
 
-    font-family: 'Manrope', sans-serif;
+    font-family: 'Manrope Variable', sans-serif;
 
     font-size: clamp(34px, 4vw, 50px);
 
@@ -130,7 +130,7 @@
 
     color: var(--text-secondary);
 
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter Variable', sans-serif;
 
     font-size: 16px;
 
@@ -168,7 +168,7 @@
 
     color: var(--text-primary);
 
-    font-family: 'Manrope', sans-serif;
+    font-family: 'Manrope Variable', sans-serif;
 
     font-size: clamp(34px, 4vw, 50px);
 
@@ -203,7 +203,7 @@
 .about-value-number {
     color: var(--accent);
 
-    font-family: 'Manrope', sans-serif;
+    font-family: 'Manrope Variable', sans-serif;
 
     font-size: 13px;
     font-weight: 700;
@@ -215,7 +215,7 @@
 
     color: var(--text-primary);
 
-    font-family: 'Manrope', sans-serif;
+    font-family: 'Manrope Variable', sans-serif;
 
     font-size: 24px;
 
@@ -230,7 +230,7 @@
 
     color: var(--text-secondary);
 
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter Variable', sans-serif;
 
     font-size: 14px;
 
@@ -267,7 +267,7 @@
 
     color: var(--text-primary);
 
-    font-family: 'Manrope', sans-serif;
+    font-family: 'Manrope Variable', sans-serif;
 
     font-size: clamp(34px, 4vw, 50px);
 
@@ -282,7 +282,7 @@
 
     color: var(--text-secondary);
 
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter Variable', sans-serif;
 
     font-size: 15px;
 
@@ -318,7 +318,7 @@
 .about-process-number {
     color: var(--accent);
 
-    font-family: 'Manrope', sans-serif;
+    font-family: 'Manrope Variable', sans-serif;
 
     font-size: 13px;
     font-weight: 700;
@@ -330,7 +330,7 @@
 
     color: var(--text-primary);
 
-    font-family: 'Manrope', sans-serif;
+    font-family: 'Manrope Variable', sans-serif;
 
     font-size: 21px;
 }
@@ -343,7 +343,7 @@
 
     color: var(--text-secondary);
 
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter Variable', sans-serif;
 
     font-size: 14px;
 
@@ -384,7 +384,7 @@
 
     color: var(--text-primary);
 
-    font-family: 'Manrope', sans-serif;
+    font-family: 'Manrope Variable', sans-serif;
 
     font-size: clamp(32px, 4vw, 48px);
 
@@ -397,7 +397,7 @@
 
     color: var(--text-secondary);
 
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter Variable', sans-serif;
 
     font-size: 16px;
 
@@ -437,7 +437,7 @@
 
     color: var(--text-primary);
 
-    font-family: 'Manrope', sans-serif;
+    font-family: 'Manrope Variable', sans-serif;
 
     font-size: clamp(34px, 4vw, 50px);
 
@@ -452,7 +452,7 @@
 
     color: var(--text-secondary);
 
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter Variable', sans-serif;
 
     font-size: 16px;
 

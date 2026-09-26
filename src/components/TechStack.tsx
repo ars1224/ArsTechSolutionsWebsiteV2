@@ -1,20 +1,38 @@
 import '../styles/TechStack.css'
 
+
 type Technology = {
   name: string
   logo: string
 }
 
+
 type TechStackProps = {
   technologies: Technology[]
+  eyebrow?: string
+  title?: string
+  description?: string
 }
 
-function TechStack({ technologies }: TechStackProps) {
 
-  const repeatedTechnologies = [
+function TechStack({
+  technologies,
+  eyebrow = 'Tools & Technologies',
+  title = 'Technologies we use to build modern digital solutions.',
+  description =
+    'We choose practical tools based on the needs of each project.'
+}: TechStackProps) {
+
+  if (technologies.length === 0) {
+    return null
+  }
+
+
+  const carouselTechnologies = [
     ...technologies,
     ...technologies
   ]
+
 
   return (
     <section className="tech-stack">
@@ -24,15 +42,17 @@ function TechStack({ technologies }: TechStackProps) {
         <div className="tech-stack-heading">
 
           <p>
-            Tools & Technologies
+            {eyebrow}
           </p>
 
+
           <h2>
-            Technologies we use to build modern digital solutions.
+            {title}
           </h2>
 
+
           <span>
-            We choose practical tools based on the needs of each project.
+            {description}
           </span>
 
         </div>
@@ -44,23 +64,32 @@ function TechStack({ technologies }: TechStackProps) {
 
         <div className="tech-carousel-track">
 
-          {repeatedTechnologies.map((technology, index) => (
-            <div
-              className="tech-item"
-              key={`${technology.name}-${index}`}
-            >
+          {carouselTechnologies.map(
+            (technology, index) => (
 
-              <img
-                src={technology.logo}
-                alt={`${technology.name} logo`}
-              />
+              <div
+                className="tech-item"
+                key={`${technology.name}-${index}`}
+              >
 
-              <span>
-                {technology.name}
-              </span>
+                <img
+                  src={technology.logo}
+                  alt={`${technology.name} logo`}
+                  width="48"
+                  height="48"
+                  loading="lazy"
+                  decoding="async"
+                />
 
-            </div>
-          ))}
+
+                <span>
+                  {technology.name}
+                </span>
+
+              </div>
+
+            )
+          )}
 
         </div>
 
@@ -69,5 +98,6 @@ function TechStack({ technologies }: TechStackProps) {
     </section>
   )
 }
+
 
 export default TechStack

@@ -32,9 +32,10 @@
 
     color: var(--accent);
 
-    font-family: 'Manrope', sans-serif;
+    font-family: 'Manrope Variable', sans-serif;
 
     font-size: 13px;
+
     font-weight: 700;
 
     letter-spacing: 0.12em;
@@ -48,7 +49,7 @@
 
     color: var(--text-primary);
 
-    font-family: 'Manrope', sans-serif;
+    font-family: 'Manrope Variable', sans-serif;
 
     font-size: clamp(32px, 4vw, 48px);
 
@@ -63,7 +64,7 @@
 
     color: var(--text-secondary);
 
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter Variable', sans-serif;
 
     font-size: 16px;
 
@@ -84,12 +85,12 @@
 }
 
 
-/* fade left and right edges */
 .tech-carousel::before,
 .tech-carousel::after {
-    content: "";
+    content: '';
 
     width: 120px;
+
     height: 100%;
 
     position: absolute;
@@ -105,26 +106,27 @@
 .tech-carousel::before {
     left: 0;
 
-    background: linear-gradient(
-        to right,
-        var(--bg-secondary),
-        transparent
-    );
+    background:
+        linear-gradient(
+            to right,
+            var(--bg-secondary),
+            transparent
+        );
 }
 
 
 .tech-carousel::after {
     right: 0;
 
-    background: linear-gradient(
-        to left,
-        var(--bg-secondary),
-        transparent
-    );
+    background:
+        linear-gradient(
+            to left,
+            var(--bg-secondary),
+            transparent
+        );
 }
 
 
-/* Moving row */
 .tech-carousel-track {
     width: max-content;
 
@@ -134,56 +136,51 @@
 
     gap: 18px;
 
-    animation: tech-scroll 60s linear infinite;
+    animation:
+        tech-scroll 35s linear infinite;
 }
 
 
-/* pause when mouse is over carousel */
 .tech-carousel:hover .tech-carousel-track {
     animation-play-state: paused;
 }
 
 
-/* =========================
-   TECHNOLOGY ITEM
-========================= */
-
 .tech-item {
     width: 150px;
+
     min-width: 150px;
 
-    height: 100px;
+    height: 105px;
 
     padding: 16px;
 
     display: flex;
+
     flex-direction: column;
 
     align-items: center;
+
     justify-content: center;
 
     gap: 12px;
 
-    background: transparent;
-
-    border: none !important;
-    border-radius: 0;
-
-    box-shadow: none;
+    transition:
+        transform 0.2s ease,
+        background-color 0.2s ease;
 }
 
 
 .tech-item:hover {
+    background: var(--bg-elevated);
+
     transform: translateY(-3px);
-
-    border-color: #424b57;
-
-    background: #1b2027;
 }
 
 
 .tech-item img {
     width: 48px;
+
     height: 48px;
 
     object-fit: contain;
@@ -193,18 +190,15 @@
 .tech-item span {
     color: var(--text-secondary);
 
-    font-family: 'Manrope', sans-serif;
+    font-family: 'Manrope Variable', sans-serif;
 
     font-size: 13px;
+
     font-weight: 600;
 
     text-align: center;
 }
 
-
-/* =========================
-   ANIMATION
-========================= */
 
 @keyframes tech-scroll {
 
@@ -213,15 +207,13 @@
     }
 
     to {
-        transform: translateX(calc(-50% - 9px));
+        transform: translateX(
+            calc(-50% - 9px)
+        );
     }
 
 }
 
-
-/* =========================
-   MOBILE
-========================= */
 
 @media (max-width: 576px) {
 
@@ -240,45 +232,41 @@
     }
 
 
-    .tech-carousel-track {
-        gap: 14px;
-
-        animation-duration: 26s;
-    }
-
-
-    .tech-item {
-        width: 135px;
-        min-width: 135px;
-
-        height: 105px;
-
-        padding: 16px;
-    }
-
-
-    .tech-item img {
-        width: 40px;
-        height: 40px;
-    }
-
-
     .tech-carousel::before,
     .tech-carousel::after {
         width: 45px;
     }
 
+
+    .tech-carousel-track {
+        gap: 14px;
+
+        animation-duration: 24s;
+    }
+
+
+    .tech-item {
+        width: 135px;
+
+        min-width: 135px;
+
+        height: 100px;
+    }
+
+
+    .tech-item img {
+        width: 42px;
+
+        height: 42px;
+    }
+
 }
 
-
-/* =========================
-   ACCESSIBILITY
-========================= */
 
 @media (prefers-reduced-motion: reduce) {
 
     .tech-carousel-track {
-        animation-duration: 50s;
+        animation: none;
     }
 
 }

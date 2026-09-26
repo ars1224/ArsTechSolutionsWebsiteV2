@@ -27,7 +27,7 @@
 
     color: var(--accent);
 
-    font-family: 'Manrope', sans-serif;
+    font-family: 'Manrope Variable', sans-serif;
 
     font-size: 13px;
     font-weight: 700;
@@ -45,7 +45,7 @@
 
     color: var(--text-primary);
 
-    font-family: 'Manrope', sans-serif;
+    font-family: 'Manrope Variable', sans-serif;
 
     font-size: clamp(48px, 7vw, 82px);
 
@@ -69,7 +69,7 @@
 
     color: var(--text-secondary);
 
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter Variable', sans-serif;
 
     font-size: 18px;
 
@@ -155,7 +155,7 @@
 .work-card-number {
     color: var(--accent);
 
-    font-family: 'Manrope', sans-serif;
+    font-family: 'Manrope Variable', sans-serif;
 
     font-size: 13px;
     font-weight: 700;
@@ -173,7 +173,7 @@
 
     color: var(--accent);
 
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter Variable', sans-serif;
 
     font-size: 11px;
     font-weight: 600;
@@ -194,7 +194,7 @@
 
     color: var(--text-primary);
 
-    font-family: 'Manrope', sans-serif;
+    font-family: 'Manrope Variable', sans-serif;
 
     font-size: clamp(26px, 3vw, 34px);
 
@@ -211,7 +211,7 @@
 
     color: var(--text-secondary);
 
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter Variable', sans-serif;
 
     font-size: 15px;
 
@@ -245,7 +245,7 @@
 
     color: var(--text-secondary);
 
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter Variable', sans-serif;
 
     font-size: 11px;
 }
@@ -274,7 +274,7 @@
 
     color: var(--text-primary);
 
-    font-family: 'Manrope', sans-serif;
+    font-family: 'Manrope Variable', sans-serif;
 
     font-size: clamp(34px, 4vw, 50px);
 
@@ -291,7 +291,7 @@
 
     color: var(--text-secondary);
 
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter Variable', sans-serif;
 
     font-size: 16px;
 
@@ -331,7 +331,7 @@
 
     color: var(--text-primary);
 
-    font-family: 'Manrope', sans-serif;
+    font-family: 'Manrope Variable', sans-serif;
 
     font-size: clamp(34px, 4vw, 50px);
 
@@ -348,7 +348,7 @@
 
     color: var(--text-secondary);
 
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter Variable', sans-serif;
 
     font-size: 16px;
 

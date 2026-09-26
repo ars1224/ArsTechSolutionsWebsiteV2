@@ -15,7 +15,7 @@
 .form-field__label {
     color: var(--text-primary);
 
-    font-family: 'Manrope', sans-serif;
+    font-family: 'Manrope Variable', sans-serif;
 
     font-size: 14px;
     font-weight: 600;
@@ -47,7 +47,7 @@
 
     color: var(--text-primary);
 
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter Variable', sans-serif;
 
     font-size: 15px;
 
@@ -114,7 +114,7 @@
 
     color: #ff7777;
 
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter Variable', sans-serif;
 
     font-size: 13px;
 

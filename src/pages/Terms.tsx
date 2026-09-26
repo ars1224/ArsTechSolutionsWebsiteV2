@@ -1,15 +1,29 @@
 import '../styles/Legal.css'
 import PageMeta from '../components/PageMeta'
+import StructuredData from '../components/StructuredData'
+
+import {
+  createBreadcrumbSchema
+} from '../data/structuredData'
 
 
 function Terms() {
   return (
     <>
-<PageMeta
-  title="Digital Solutions for New Zealand Businesses"
-  description="Practical digital solutions for businesses that need stronger websites, better customer journeys, custom web systems, improved visibility or technology support."
-  path="/solutions"
-/>
+        <PageMeta
+          title="Terms & Conditions"
+          description="Read the website terms and conditions for using the ARS Tech Solutions website and its information, services and resources."
+          path="/terms"
+        />
+
+        <StructuredData
+            data={
+              createBreadcrumbSchema(
+                'Terms & Conditions',
+                '/terms'
+              )
+            }
+          />
       {/* =========================
           HERO
       ========================= */}

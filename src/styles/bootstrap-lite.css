@@ -1,0 +1,269 @@
+/* =========================================
+   ARS — Minimal Bootstrap compatibility CSS
+   Only what the current site actually uses
+========================================= */
+
+
+/* CONTAINER */
+
+.container {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 12px;
+    padding-left: 12px;
+}
+
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1320px;
+    }
+}
+
+
+/* BASIC BUTTON */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    font: inherit;
+    text-align: center;
+    text-decoration: none;
+
+    cursor: pointer;
+
+    border: 1px solid transparent;
+}
+
+
+/* NAV */
+
+.navbar {
+    position: relative;
+}
+
+.navbar-brand {
+    display: inline-flex;
+}
+
+.navbar-nav {
+    list-style: none;
+}
+
+.nav-link {
+    display: block;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+
+/* MOBILE TOGGLER */
+
+.navbar-toggler {
+    font: inherit;
+    cursor: pointer;
+}
+
+.navbar-toggler-icon {
+    display: inline-block;
+
+    width: 1.5em;
+    height: 1.5em;
+
+    vertical-align: middle;
+
+    background-image:
+        url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280,0,0,0.85%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+}
+
+
+/* OFFCANVAS */
+
+.offcanvas {
+    position: fixed;
+    bottom: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    max-width: 100%;
+
+    visibility: hidden;
+
+    outline: 0;
+
+    transition: transform 0.3s ease-in-out;
+}
+
+.offcanvas-start {
+    top: 0;
+    left: 0;
+
+    transform: translateX(-100%);
+}
+
+.offcanvas.show:not(.hiding),
+.offcanvas.showing {
+    transform: none;
+}
+
+.offcanvas.show:not(.hiding),
+.offcanvas.showing,
+.offcanvas.hiding {
+    visibility: visible;
+}
+
+.offcanvas-header {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+}
+
+.offcanvas-body {
+    flex-grow: 1;
+
+    overflow-y: auto;
+}
+
+
+/* OFFCANVAS BACKDROP */
+
+.offcanvas-backdrop {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    z-index: 1990;
+
+    width: 100vw;
+    height: 100vh;
+
+    background: #000;
+}
+
+.fade {
+    transition: opacity 0.15s linear;
+}
+
+.offcanvas-backdrop.fade {
+    opacity: 0;
+}
+
+.offcanvas-backdrop.show {
+    opacity: 0.5;
+}
+
+
+/* CLOSE BUTTON */
+
+.btn-close {
+    position: relative;
+
+    width: 32px;
+    height: 32px;
+
+    padding: 0;
+
+    background: transparent;
+
+    border: 0;
+
+    cursor: pointer;
+
+    opacity: 0.8;
+}
+
+.btn-close::before,
+.btn-close::after {
+    content: '';
+
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    width: 20px;
+    height: 2px;
+
+    background: currentColor;
+
+    transform-origin: center;
+}
+
+.btn-close::before {
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.btn-close::after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.btn-close-white {
+    color: #fff;
+}
+
+.btn-close:hover {
+    opacity: 1;
+}
+
+
+/* ACCESSIBILITY */
+
+.visually-hidden {
+    position: absolute !important;
+
+    width: 1px !important;
+    height: 1px !important;
+
+    padding: 0 !important;
+    margin: -1px !important;
+
+    overflow: hidden !important;
+
+    clip: rect(0, 0, 0, 0) !important;
+
+    white-space: nowrap !important;
+
+    border: 0 !important;
+}
+
+
+/* ONLY BOOTSTRAP UTILITY CURRENTLY USED */
+
+@media (min-width: 992px) {
+    .ms-lg-3 {
+        margin-left: 1rem !important;
+    }
+}

@@ -55,7 +55,6 @@ function FeaturedProjects({ projects }: FeaturedProjectsProps) {
               image={project.image}
               imageAlt={project.imageAlt}
               link={project.link}
-              linkText="View Project"
             />
           ))}
 

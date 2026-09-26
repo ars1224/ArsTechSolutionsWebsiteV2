@@ -1,73 +1,53 @@
 import Button from '../components/Button'
+import Card from '../components/Card'
+import PageMeta from '../components/PageMeta'
+import StructuredData from '../components/StructuredData'
+
+import Partners from '../components/Partners'
+
+import { projects } from '../data/projects'
+
+import {
+  createBreadcrumbSchema
+} from '../data/structuredData'
 
 import '../styles/Work.css'
-import PageMeta from '../components/PageMeta'
 
 
 function Work() {
 
-  const projects = [
-    {
-      type: 'Internal Project',
-      title: 'ARS Tech Solutions Website V2',
-      description:
-        'A complete rebuild of the ARS Tech Solutions website using React, TypeScript and Vite, with reusable components, responsive layouts and a stronger multi-page structure.',
-      technologies: [
-        'React',
-        'TypeScript',
-        'Vite',
-        'Bootstrap',
-        'CSS'
-      ]
-    },
-    {
-      type: 'Homepage Redesign Concept',
-      title: 'UDI Painting & Decorating',
-      description:
-        'A homepage redesign concept focused on presenting services more clearly, showcasing completed work, strengthening trust and making customer enquiries easier.',
-      technologies: [
-        'UI/UX',
-        'Responsive Design',
-        'Conversion Design',
-        'Web Design'
-      ]
-    },
-    {
-      type: 'Web Application',
-      title: 'Wedding RSVP & Guest Manager',
-      description:
-        'A custom RSVP system with guest lookup, attendance responses, food selections and an administration interface for managing guests and reporting.',
-      technologies: [
-        'JavaScript',
-        'Supabase',
-        'Netlify Functions',
-        'HTML',
-        'CSS'
-      ]
-    },
-    {
-      type: 'Study Project',
-      title: 'TaskFlow',
-      description:
-        'A task management web application with authentication, dashboards, task tracking, overdue monitoring, history and notifications.',
-      technologies: [
-        'Flask',
-        'Python',
-        'PostgreSQL',
-        'SQLAlchemy',
-        'AWS'
-      ]
-    }
-  ]
+  const featuredProjects =
+    projects.filter(
+      (project) => project.featured
+    )
+
+
+  const otherProjects =
+    projects.filter(
+      (project) => !project.featured
+    )
 
 
   return (
     <>
-<PageMeta
-  title="Digital Solutions for New Zealand Businesses"
-  description="Practical digital solutions for businesses that need stronger websites, better customer journeys, custom web systems, improved visibility or technology support."
-  path="/solutions"
-/>
+
+      <PageMeta
+        title="Web Design & Development Projects"
+        description="Explore real website, web application and digital project work from ARS Tech Solutions, including business websites, redesign concepts and custom systems."
+        path="/work"
+      />
+
+
+      <StructuredData
+        data={
+          createBreadcrumbSchema(
+            'Work',
+            '/work'
+          )
+        }
+      />
+
+
       {/* =========================
           HERO
       ========================= */}
@@ -95,71 +75,113 @@ function Work() {
 
       </section>
 
+      <Partners compact />
+
+
+
 
       {/* =========================
-          PROJECTS
+          FEATURED PROJECTS
       ========================= */}
 
-      <section className="work-projects">
+      <section className="featured-projects">
 
-        <div className="container work-projects-container">
+        <div className="container featured-projects-container">
 
-          <div className="work-grid">
+          <div className="featured-projects-heading">
 
-            {projects.map((project, index) => (
+            <div>
 
-              <article
-                className="work-card"
-                key={project.title}
-              >
-
-                <div className="work-card-top">
-
-                  <span className="work-card-number">
-                    {String(index + 1).padStart(2, '0')}
-                  </span>
-
-                  <span className="work-card-type">
-                    {project.type}
-                  </span>
-
-                </div>
+              <p className="featured-projects-eyebrow">
+                Featured Work
+              </p>
 
 
-                <div className="work-card-content">
+              <h2>
+                A closer look at some of our strongest projects.
+              </h2>
 
-                  <h2>
-                    {project.title}
-                  </h2>
+            </div>
 
-                  <p>
-                    {project.description}
-                  </p>
-
-                </div>
+          </div>
 
 
-                <div className="work-card-tech">
+          <div className="featured-projects-grid">
 
-                  {project.technologies.map((technology) => (
+            {featuredProjects.map(
+              (project) => (
 
-                    <span key={technology}>
-                      {technology}
-                    </span>
+                <Card
+                  key={project.slug}
+                  variant="project"
+                  eyebrow={project.type}
+                  title={project.title}
+                  description={project.summary}
+                  image={project.image}
+                  imageAlt={project.imageAlt}
+                  link={`/work/${project.slug}`}
+                  linkText="View Case Study"
+                />
 
-                  ))}
-
-                </div>
-
-              </article>
-
-            ))}
+              )
+            )}
 
           </div>
 
         </div>
 
       </section>
+
+
+
+      {/* =========================
+          MORE PROJECTS
+      ========================= */}
+
+      <section className="work-projects">
+
+        <div className="container work-projects-container">
+
+          <div className="work-section-heading">
+
+            <p className="work-eyebrow">
+              More Projects
+            </p>
+
+
+            <h2>
+              More work across websites, applications and software.
+            </h2>
+
+          </div>
+
+
+          <div className="work-grid">
+
+            {otherProjects.map(
+              (project) => (
+
+                <Card
+                  key={project.slug}
+                  variant="project"
+                  eyebrow={project.type}
+                  title={project.title}
+                  description={project.summary}
+                  image={project.image}
+                  imageAlt={project.imageAlt}
+                  link={`/work/${project.slug}`}
+                  linkText="View Project"
+                />
+
+              )
+            )}
+
+          </div>
+
+        </div>
+
+      </section>
+
 
 
       {/* =========================
@@ -174,9 +196,11 @@ function Work() {
             More To Come
           </p>
 
+
           <h2>
             We’re continuing to build.
           </h2>
+
 
           <p>
             As new projects are completed, this portfolio will continue
@@ -187,6 +211,7 @@ function Work() {
         </div>
 
       </section>
+
 
 
       {/* =========================
@@ -203,9 +228,11 @@ function Work() {
               Have Something In Mind?
             </p>
 
+
             <h2>
               Let’s build something useful for your business.
             </h2>
+
 
             <p className="work-cta-description">
               Tell us what you want to create, improve or solve and

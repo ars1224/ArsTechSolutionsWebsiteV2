@@ -28,7 +28,7 @@
 
     color: var(--accent);
 
-    font-family: 'Manrope', sans-serif;
+    font-family: 'Manrope Variable', sans-serif;
 
     font-size: 13px;
     font-weight: 700;
@@ -46,7 +46,7 @@
 
     color: var(--text-primary);
 
-    font-family: 'Manrope', sans-serif;
+    font-family: 'Manrope Variable', sans-serif;
 
     font-size: clamp(32px, 4vw, 48px);
 
@@ -64,7 +64,7 @@
 
     color: var(--text-secondary);
 
-    font-family: 'Manrope', sans-serif;
+    font-family: 'Manrope Variable', sans-serif;
 
     font-size: 14px;
     font-weight: 700;

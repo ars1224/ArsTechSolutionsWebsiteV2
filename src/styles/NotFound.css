@@ -30,7 +30,7 @@
 
     color: var(--accent);
 
-    font-family: 'Manrope', sans-serif;
+    font-family: 'Manrope Variable', sans-serif;
 
     font-size: 15px;
     font-weight: 700;
@@ -46,7 +46,7 @@
 
     color: var(--text-primary);
 
-    font-family: 'Manrope', sans-serif;
+    font-family: 'Manrope Variable', sans-serif;
 
     font-size: clamp(48px, 7vw, 82px);
 
@@ -70,7 +70,7 @@
 
     color: var(--text-secondary);
 
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter Variable', sans-serif;
 
     font-size: 18px;
 

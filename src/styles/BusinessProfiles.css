@@ -1,0 +1,33 @@
+.business-profiles {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.business-profiles h3 {
+  margin: 0;
+
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.business-profiles-list {
+  display: flex;
+  flex-direction: column;
+
+  gap: 10px;
+}
+
+.business-profile-link {
+  color: var(--text-secondary);
+
+  font-size: 14px;
+
+  text-decoration: none;
+
+  transition: color 0.2s ease;
+}
+
+.business-profile-link:hover {
+  color: var(--text-primary);
+}

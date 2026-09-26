@@ -1,0 +1,314 @@
+.partners-section {
+  width: 100%;
+  padding: 72px 24px;
+
+  background: var(--bg-secondary);
+
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+
+.partners-container {
+  max-width: 1240px;
+
+  margin: 0 auto;
+}
+
+
+.partners-heading {
+  max-width: 680px;
+
+  margin-bottom: 36px;
+}
+
+
+.partners-eyebrow {
+  margin: 0 0 12px;
+
+  font-family: 'Inter Variable', sans-serif;
+
+  font-size: 0.8rem;
+  font-weight: 600;
+
+  letter-spacing: 0.14em;
+
+  color: var(--text-secondary);
+}
+
+
+.partners-heading h2 {
+  margin: 0 0 16px;
+
+  font-family: 'Manrope Variable', sans-serif;
+
+  font-size: clamp(2rem, 4vw, 3rem);
+
+  line-height: 1.1;
+
+  color: var(--text-primary);
+}
+
+
+.partners-description {
+  margin: 0;
+
+  max-width: 620px;
+
+  font-family: 'Inter Variable', sans-serif;
+
+  font-size: 1rem;
+
+  line-height: 1.7;
+
+  color: var(--text-secondary);
+}
+
+
+.netlify-partner-card {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  gap: 24px;
+
+  width: 100%;
+
+  padding: 28px 32px;
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  border-radius: 14px;
+
+  background: rgba(8, 12, 16, 0.72);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.025),
+    0 12px 40px rgba(0, 0, 0, 0.15);
+
+  color: var(--text-primary);
+
+  text-decoration: none;
+
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.netlify-partner-card:hover {
+  transform: translateY(-3px);
+
+  border-color: rgba(50, 230, 190, 0.32);
+
+  background: rgba(10, 15, 20, 0.9);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.04),
+    0 18px 50px rgba(0, 0, 0, 0.22);
+}
+
+.netlify-partner-card::before {
+  content: '';
+
+  position: absolute;
+
+  top: -1px;
+  left: 28px;
+
+  width: 90px;
+  height: 2px;
+
+  border-radius: 999px;
+
+  background: rgba(50, 230, 190, 0.75);
+
+  opacity: 0.7;
+}
+
+
+.netlify-partner-logo {
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 88px;
+  height: 88px;
+
+  border-radius: 14px;
+
+  background: rgba(255, 255, 255, 0.04);
+}
+
+
+.netlify-partner-logo img {
+  width: 56px;
+  height: 56px;
+
+  object-fit: contain;
+}
+
+
+.netlify-partner-content {
+  flex: 1;
+}
+
+
+.netlify-partner-label {
+  display: block;
+
+  margin-bottom: 6px;
+
+  font-family: 'Inter Variable', sans-serif;
+
+  font-size: 0.72rem;
+  font-weight: 600;
+
+  letter-spacing: 0.14em;
+
+  color: var(--text-secondary);
+}
+
+
+.netlify-partner-content h3 {
+  margin: 0 0 6px;
+
+  font-family: 'Manrope Variable', sans-serif;
+
+  font-size: 1.45rem;
+
+  color: var(--text-primary);
+}
+
+
+.netlify-partner-content p {
+  margin: 0;
+
+  font-family: 'Inter Variable', sans-serif;
+
+  line-height: 1.6;
+
+  color: var(--text-secondary);
+}
+
+
+.netlify-partner-arrow {
+  flex-shrink: 0;
+
+  font-size: 1.5rem;
+
+  color: var(--text-secondary);
+
+  transition: transform 0.2s ease;
+}
+
+
+.netlify-partner-card:hover
+.netlify-partner-arrow {
+  transform: translate(3px, -3px);
+}
+
+
+.partner-disclosure {
+  margin: 14px 0 0;
+
+  font-family: 'Inter Variable', sans-serif;
+
+  font-size: 0.75rem;
+
+  line-height: 1.5;
+
+  color: var(--text-secondary);
+
+  opacity: 0.75;
+}
+
+
+.partners-section-compact {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+
+.partners-section-compact
+.partners-container {
+  max-width: 1100px;
+}
+
+
+.partners-section-compact
+.netlify-partner-card {
+  padding: 20px 24px;
+}
+
+
+.partners-section-compact
+.netlify-partner-logo {
+  width: 68px;
+  height: 68px;
+}
+
+
+.partners-section-compact
+.netlify-partner-logo img {
+  width: 44px;
+  height: 44px;
+}
+
+
+.partners-section-compact
+.partner-disclosure {
+  margin-top: 10px;
+}
+
+@media (max-width: 700px) {
+
+  .partners-section {
+    padding: 56px 20px;
+  }
+
+
+  .netlify-partner-card {
+    align-items: flex-start;
+
+    padding: 24px;
+
+    gap: 18px;
+  }
+
+
+  .netlify-partner-logo {
+    width: 64px;
+    height: 64px;
+  }
+
+
+  .netlify-partner-logo img {
+    width: 42px;
+    height: 42px;
+  }
+
+
+  .netlify-partner-arrow {
+    position: absolute;
+
+    top: 22px;
+    right: 22px;
+  }
+
+}
+
+
+@media (max-width: 480px) {
+
+  .netlify-partner-card {
+    flex-direction: column;
+  }
+
+}

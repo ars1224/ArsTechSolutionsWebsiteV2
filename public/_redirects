@@ -1,3 +1,14 @@
+/tech-support                     /services                  301
+/tech-support/                    /services                  301
+
+/work-with-us                     /contact                   301
+/work-with-us/                    /contact                   301
+
+/work/kiss-web-inventory-system   /work                      301
+/work/kiss-web-inventory-system/  /work                      301
+
+/work/digital-wedding-invitation  /work                      301
+/work/digital-wedding-invitation/ /work                      301
 # ARS Tech Solutions Website V2
 # vite-react-ssg generates real static pages.
 # Do NOT use the old SPA catch-all:

@@ -2,6 +2,14 @@ import Button from '../components/Button'
 
 import '../styles/Solutions.css'
 import PageMeta from '../components/PageMeta'
+import StructuredData from '../components/StructuredData'
+
+import Partners from '../components/Partners'
+
+
+import {
+  createBreadcrumbSchema
+} from '../data/structuredData'
 
 
 function Solutions() {
@@ -116,11 +124,20 @@ function Solutions() {
 
   return (
     <>
-<PageMeta
-  title="Digital Solutions for New Zealand Businesses"
-  description="Practical digital solutions for businesses that need stronger websites, better customer journeys, custom web systems, improved visibility or technology support."
-  path="/solutions"
-/>
+      <PageMeta
+        title="Digital Solutions for New Zealand Businesses"
+        description="Practical digital solutions for businesses that need stronger websites, better customer journeys, custom web systems, improved visibility or technology support."
+        path="/solutions"
+      />
+
+      <StructuredData
+        data={
+          createBreadcrumbSchema(
+            'Solutions',
+            '/solutions'
+          )
+        }
+      />
       {/* =========================
           HERO
       ========================= */}
@@ -151,6 +168,7 @@ function Solutions() {
 
       </section>
 
+      <Partners compact/>
 
       {/* =========================
           SOLUTIONS

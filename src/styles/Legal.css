@@ -27,7 +27,7 @@
 
     color: var(--accent);
 
-    font-family: 'Manrope', sans-serif;
+    font-family: 'Manrope Variable', sans-serif;
 
     font-size: 13px;
     font-weight: 700;
@@ -43,7 +43,7 @@
 
     color: var(--text-primary);
 
-    font-family: 'Manrope', sans-serif;
+    font-family: 'Manrope Variable', sans-serif;
 
     font-size: clamp(48px, 7vw, 78px);
 
@@ -62,7 +62,7 @@
 
     color: var(--text-secondary);
 
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter Variable', sans-serif;
 
     font-size: 18px;
 
@@ -75,7 +75,7 @@
 
     color: #747d87;
 
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter Variable', sans-serif;
 
     font-size: 13px;
 }
@@ -120,7 +120,7 @@
 
     color: var(--text-primary);
 
-    font-family: 'Manrope', sans-serif;
+    font-family: 'Manrope Variable', sans-serif;
 
     font-size: clamp(23px, 3vw, 30px);
 
@@ -133,7 +133,7 @@
 
     color: var(--text-secondary);
 
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter Variable', sans-serif;
 
     font-size: 15px;
 
@@ -164,7 +164,7 @@
 
     color: var(--text-secondary);
 
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter Variable', sans-serif;
 
     font-size: 15px;
 
@@ -200,7 +200,7 @@
 
     margin-top: 5px;
 
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter Variable', sans-serif;
 
     font-size: 15px;
 }
@@ -223,7 +223,7 @@
 .legal-contact strong {
     color: var(--text-primary);
 
-    font-family: 'Manrope', sans-serif;
+    font-family: 'Manrope Variable', sans-serif;
 
     font-size: 15px;
 }
@@ -233,7 +233,7 @@
 .legal-contact a {
     color: var(--text-secondary);
 
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter Variable', sans-serif;
 
     font-size: 14px;
 }

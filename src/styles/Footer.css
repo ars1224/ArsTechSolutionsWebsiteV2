@@ -1,8 +1,28 @@
+/* =========================
+   FOOTER TYPOGRAPHY
+========================= */
+
+.footer-description,
+.footer-column a,
+.footer-column p,
+.social-link,
+.footer-business-details p,
+.footer-business-details a {
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.footer-column h3,
+.footer-business-name {
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
 .site-footer {
     width: 100%;
 
     background: var(--bg-secondary);
-
     border-top: 1px solid var(--border-color);
 
     color: var(--text-primary);
@@ -43,9 +63,8 @@
 
     color: var(--text-secondary);
 
-    font-family: 'Inter', sans-serif;
-
-    line-height: 1.7;
+    font-size: 15px;
+    line-height: 1.6;
 }
 
 
@@ -74,10 +93,7 @@
 .footer-column h3 {
     margin: 0 0 8px;
 
-    font-family: 'Manrope', sans-serif;
-
     font-size: 15px;
-
     font-weight: 700;
 
     color: var(--text-primary);
@@ -87,7 +103,8 @@
 .footer-column a {
     color: var(--text-secondary);
 
-    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
 
     text-decoration: none;
 }
@@ -158,8 +175,8 @@
 
     color: var(--text-secondary);
 
-    font-family: 'Inter', sans-serif;
-    font-size: 14px;
+    font-size: 15px;
+    line-height: 1.6;
 
     text-decoration: none;
 
@@ -214,8 +231,6 @@
 
     color: var(--text-secondary);
 
-    font-family: 'Inter', sans-serif;
-
     font-size: 13px;
 }
 
@@ -229,7 +244,6 @@
 
     color: var(--text-secondary);
 
-    font-family: 'Inter', sans-serif;
 
     font-size: 13px;
 }
@@ -282,6 +296,147 @@
     border-radius: 5px;
 }
 
+
+.footer-business-details {
+  display: flex;
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  gap: 6px;
+
+  margin-top: 18px;
+}
+
+.footer-business-details p {
+  margin: 0;
+}
+
+.footer-business-name {
+    color: var(--text-primary);
+
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.footer-business-details p:not(.footer-business-name),
+.footer-business-details a {
+    color: var(--text-secondary);
+
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.footer-business-details a {
+  text-decoration: none;
+
+  transition: color 0.2s ease;
+}
+
+.footer-business-details a:hover {
+  color: var(--accent);
+}
+
+.footer-business-details a:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 4px;
+
+  border-radius: 3px;
+}
+
+.footer-partner {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 12px;
+
+  margin-top: 22px;
+  padding: 12px 14px;
+
+  width: fit-content;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 10px;
+
+  background: rgba(255, 255, 255, 0.025);
+
+  color: var(--text-primary);
+
+  text-decoration: none;
+
+  transition:
+    border-color 0.25s ease,
+    background 0.25s ease,
+    transform 0.25s ease;
+}
+
+
+.footer-partner:hover {
+  transform: translateY(-2px);
+
+  border-color: rgba(50, 230, 190, 0.3);
+
+  background: rgba(255, 255, 255, 0.04);
+}
+
+
+.footer-partner img {
+  width: 34px;
+  height: 34px;
+
+  object-fit: contain;
+
+  flex-shrink: 0;
+}
+
+
+.footer-partner div {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 2px;
+}
+
+
+.footer-partner-label {
+  font-family: 'Inter Variable', sans-serif;
+
+  font-size: 0.62rem;
+  font-weight: 600;
+
+  letter-spacing: 0.12em;
+
+  color: var(--text-secondary);
+}
+
+
+.footer-partner-name {
+  font-family: 'Manrope Variable', sans-serif;
+
+  font-size: 0.9rem;
+  font-weight: 600;
+
+  color: var(--text-primary);
+}
+
+
+.footer-partner-arrow {
+  margin-left: 6px;
+
+  font-size: 0.9rem;
+
+  color: var(--text-secondary);
+
+  transition: transform 0.2s ease;
+}
+
+
+.footer-partner:hover
+.footer-partner-arrow {
+  transform: translate(2px, -2px);
+}
 
 /* =========================
    TABLET / MOBILE
@@ -360,11 +515,6 @@
 
     .footer-bottom {
         padding: 20px;
-    }
-
-
-    .social-link {
-        font-size: 13px;
     }
 
 

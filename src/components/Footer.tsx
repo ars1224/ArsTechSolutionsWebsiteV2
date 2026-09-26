@@ -3,10 +3,15 @@ import { NavLink } from 'react-router-dom'
 import logo from '../assets/Logo.png'
 import facebookIcon from '../assets/Facebook_Logo_Secondary.png'
 import instagramIcon from '../assets/Instagram_Glyph_White.png'
+import linkedinIcon from '../assets/LinkedIn_Logo_White.png'
 import whatsappIcon from '../assets/Digital_Glyph_White_RGB_2026.png'
 import emailIcon from '../assets/mail_40dp_E3E3E3_FILL0_wght400_GRAD0_opsz40.png'
 
 import '../styles/Footer.css'
+
+import BusinessProfiles from '../components/BusinessProfiles.tsx'
+
+import netlifyLogo from '../assets/techstack/netlify.png'
 
 function Footer() {
   return (
@@ -25,6 +30,10 @@ function Footer() {
               src={logo}
               alt="ARS Tech Solutions"
               className="footer-logo"
+              width={480}
+              height={270}
+              loading="lazy"
+              decoding="async"
             />
           </NavLink>
 
@@ -34,9 +43,38 @@ function Footer() {
           </p>
 
 
+          {/* Business Details */}
+          <div className="footer-business-details">
+
+            <p className="footer-business-name">
+              ARS Tech Solutions
+            </p>
+
+            <p>
+              Rolleston, Canterbury, New Zealand
+            </p>
+
+            <a href="tel:+64272078245">
+              +64 27 207 8245
+            </a>
+
+            <a href="mailto:contact@arstechsolutions.com">
+              contact@arstechsolutions.com
+            </a>
+
+            <a
+              href="https://arstechsolutions.com"
+              aria-label="ARS Tech Solutions website"
+            >
+              arstechsolutions.com
+            </a>
+
+          </div>
+
           {/* Social Media */}
           <div className="footer-socials">
 
+            {/* Facebook */}
             <a
               href="https://www.facebook.com/ARStechsolutions"
               target="_blank"
@@ -48,12 +86,17 @@ function Footer() {
                 src={facebookIcon}
                 alt=""
                 className="social-icon"
+                width={96}
+                height={96}
+                loading="lazy"
+                decoding="async"
               />
 
               <span>ARStechsolutions</span>
             </a>
 
 
+            {/* Instagram */}
             <a
               href="https://www.instagram.com/ars.techsolutions/"
               target="_blank"
@@ -65,26 +108,58 @@ function Footer() {
                 src={instagramIcon}
                 alt=""
                 className="social-icon"
+                width={96}
+                height={96}
+                loading="lazy"
+                decoding="async"
               />
 
               <span>ars.techsolutions</span>
             </a>
 
+
+            {/* LinkedIn */}
             <a
-                href="mailto:contact@arstechsolutions.com"
-                className="social-link"
-                aria-label="Email ARS Tech Solutions"
-                >
-                <img
-                    src={emailIcon}
-                    alt=""
-                    className="social-icon"
-                />
+              href="https://www.linkedin.com/company/ars-tech-solutions"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="social-link"
+              aria-label="ARS Tech Solutions on LinkedIn"
+            >
+              <img
+                src={linkedinIcon}
+                alt=""
+                className="social-icon"
+                width={96}
+                height={96}
+                loading="lazy"
+                decoding="async"
+              />
 
-                <span>contact@arstechsolutions.com</span>
-                </a>
+              <span>ARS Tech Solutions</span>
+            </a>
+
+            {/* Email */}
+            <a
+              href="mailto:contact@arstechsolutions.com"
+              className="social-link"
+              aria-label="Email ARS Tech Solutions"
+            >
+              <img
+                src={emailIcon}
+                alt=""
+                className="social-icon"
+                width={96}
+                height={96}
+                loading="lazy"
+                decoding="async"
+              />
+
+              <span>contact@arstechsolutions.com</span>
+            </a>
 
 
+            {/* WhatsApp */}
             <a
               href="https://wa.me/64272078245"
               target="_blank"
@@ -96,6 +171,10 @@ function Footer() {
                 src={whatsappIcon}
                 alt=""
                 className="social-icon"
+                width={96}
+                height={96}
+                loading="lazy"
+                decoding="async"
               />
 
               <span>+64 27 207 8245</span>
@@ -105,35 +184,62 @@ function Footer() {
 
         </div>
 
-
-        {/* Footer links */}
+        <BusinessProfiles />
+        {/* Footer Links */}
         <div className="footer-links">
 
+          {/* Services */}
           <div className="footer-column">
-
             <h3>Services</h3>
 
-            <NavLink to="/services">
-              Web Development
+            <NavLink to="/services/website-design-ux-ui">
+              Website Design & UX/UI
             </NavLink>
 
-            <NavLink to="/solutions">
-              Digital Solutions
+            <NavLink to="/services/website-development">
+              Website Development
             </NavLink>
 
-            <NavLink to="/services">
-              Tech Support
+            <NavLink to="/services/website-redesign">
+              Website Redesign
             </NavLink>
 
+            <NavLink to="/services/custom-web-applications">
+              Custom Web Applications
+            </NavLink>
+
+            <NavLink to="/services/seo-website-performance">
+              SEO & Website Performance
+            </NavLink>
+
+            <NavLink to="/services/website-care">
+              Website Care
+            </NavLink>
+
+            <NavLink to="/services/ecommerce-websites">
+              E-commerce Websites
+            </NavLink>
+
+            <NavLink to="/services/hosting-domain-deployment">
+              Hosting & Deployment
+            </NavLink>
+
+            <NavLink to="/services/it-support">
+              IT Support
+            </NavLink>
           </div>
 
 
+          {/* Company */}
           <div className="footer-column">
-
             <h3>Company</h3>
 
             <NavLink to="/about">
               About
+            </NavLink>
+
+            <NavLink to="/canterbury">
+              Canterbury
             </NavLink>
 
             <NavLink to="/work">
@@ -147,10 +253,10 @@ function Footer() {
             <NavLink to="/contact">
               Contact
             </NavLink>
-
           </div>
 
 
+          {/* CTA */}
           <div className="footer-column">
 
             <h3>Get Started</h3>
@@ -166,34 +272,72 @@ function Footer() {
               Request a Quote
             </NavLink>
 
+                      <a
+            href="https://join.netlify.com/zb24zl55iau5"
+            target="_blank"
+            rel="noopener noreferrer sponsored"
+            className="footer-partner"
+            aria-label="ARS Tech Solutions - Netlify Ecosystem Partner"
+          >
+            <img
+              src={netlifyLogo}
+              alt="Netlify"
+              width="34"
+              height="34"
+              loading="lazy"
+              decoding="async"
+            />
+
+            <div>
+              <span className="footer-partner-label">
+                ECOSYSTEM PARTNER
+              </span>
+
+              <span className="footer-partner-name">
+                Netlify
+              </span>
+            </div>
+
+            <span
+              className="footer-partner-arrow"
+              aria-hidden="true"
+            >
+              ↗
+            </span>
+          </a>
+
           </div>
+
+        </div>
+      </div>
+
+      
+
+
+      {/* Footer Bottom */}
+      <div className="container footer-bottom">
+
+        <p className="footer-copyright">
+          © 2026 ARS Tech Solutions. All rights reserved. · NZBN 9429053837134
+        </p>
+
+        <div className="footer-legal">
+
+          <NavLink to="/privacy">
+            Privacy
+          </NavLink>
+
+          <NavLink to="/terms">
+            Terms
+          </NavLink>
+
+          <span>
+            Rolleston, Canterbury, New Zealand
+          </span>
 
         </div>
 
       </div>
-
-
-        <div className="container footer-bottom">
-
-            <p className="footer-copyright">
-                © 2026 ARS Tech Solutions. All rights reserved. · NZBN 9429053837134
-            </p>
-
-            <div className="footer-legal">
-                <NavLink to="/privacy">
-                Privacy
-                </NavLink>
-
-                <NavLink to="/terms">
-                Terms
-                </NavLink>
-
-                <span>
-                Rolleston, Canterbury, New Zealand
-                </span>
-            </div>
-
-        </div>
 
     </footer>
   )

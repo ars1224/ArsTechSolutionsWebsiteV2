@@ -7,12 +7,12 @@ import PageMeta from '../components/PageMeta'
 function NotFound() {
   return (
     <>
-    <PageMeta
-      title="Page Not Found"
-      description="The requested page could not be found on the ARS Tech Solutions website."
-      path="/404"
-      noIndex
-    />
+      <PageMeta
+        title="Page Not Found"
+        description="The page you were looking for could not be found."
+        path="/404"
+        noIndex
+      />
     <section className="not-found">
 
       <div className="container not-found-container">

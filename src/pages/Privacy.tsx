@@ -1,14 +1,28 @@
 import '../styles/Legal.css'
 import PageMeta from '../components/PageMeta'
+import StructuredData from '../components/StructuredData'
+
+import {
+  createBreadcrumbSchema
+} from '../data/structuredData'
 
 function Privacy() {
   return (
     <>
-<PageMeta
-  title="Digital Solutions for New Zealand Businesses"
-  description="Practical digital solutions for businesses that need stronger websites, better customer journeys, custom web systems, improved visibility or technology support."
-  path="/solutions"
-/>
+      <PageMeta
+        title="Privacy Policy"
+        description="Read the ARS Tech Solutions privacy policy and learn how personal information submitted through the website is collected, used and handled."
+        path="/privacy"
+      />
+
+      <StructuredData
+        data={
+          createBreadcrumbSchema(
+            'Privacy Policy',
+            '/privacy'
+          )
+        }
+      />
       {/* =========================
           HERO
       ========================= */}
@@ -382,6 +396,8 @@ function Privacy() {
         </div>
 
       </section>
+
+      
 
     </>
   )

@@ -1,0 +1,672 @@
+.work-detail-hero {
+    padding: 100px 24px 90px;
+
+    border-bottom: 1px solid var(--border-color);
+}
+
+
+.work-detail-hero-container {
+    max-width: 1240px;
+
+    margin: 0 auto;
+}
+
+
+.work-detail-back {
+    display: inline-block;
+
+    margin-bottom: 32px;
+
+    color: var(--text-secondary);
+
+    font-family: 'Inter Variable', sans-serif;
+
+    text-decoration: none;
+
+    transition: color 0.2s ease;
+}
+
+
+.work-detail-back:hover {
+    color: var(--text-primary);
+}
+
+
+.work-detail-eyebrow {
+    margin: 0 0 16px;
+
+    font-family: 'Manrope Variable', sans-serif;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.12em;
+
+    text-transform: uppercase;
+}
+
+
+.work-detail-hero h1 {
+    max-width: 1000px;
+
+    margin: 0;
+
+    font-family: 'Manrope Variable', sans-serif;
+
+    font-size: clamp(42px, 5vw, 68px);
+
+    line-height: 1.08;
+
+    letter-spacing: -0.03em;
+}
+
+
+.work-detail-summary {
+    max-width: 900px;
+
+    margin: 28px 0 32px;
+
+    color: var(--text-secondary);
+
+    font-family: 'Inter Variable', sans-serif;
+
+    font-size: 18px;
+
+    line-height: 1.7;
+}
+
+/* =========================
+   project image
+========================= */
+
+.work-detail-media {
+    padding: 0 24px 95px;
+
+    border-bottom: 1px solid var(--border-color);
+}
+
+
+.work-detail-media-container {
+    max-width: 1240px;
+
+    margin: 0 auto;
+}
+
+
+.work-detail-image {
+    display: block;
+
+    width: 100%;
+
+    max-height: 720px;
+
+    object-fit: cover;
+
+    object-position: top;
+
+    border: 1px solid var(--border-color);
+
+    border-radius: 16px;
+}
+
+.work-detail-technologies {
+    padding: 95px 24px;
+
+    background: var(--bg-secondary);
+
+    border-top: 1px solid var(--border-color);
+
+    border-bottom: 1px solid var(--border-color);
+}
+
+
+.work-detail-tech-description {
+    max-width: 650px;
+
+    margin: 18px 0 0;
+
+    color: var(--text-secondary);
+
+    font-family: 'Inter Variable', sans-serif;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+}
+
+
+.work-detail-tech-grid {
+    display: grid;
+
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(120px, 1fr)
+    );
+
+    gap: 28px;
+
+    margin-top: 45px;
+}
+
+
+.work-detail-tech-item {
+    padding: 12px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    background: transparent;
+
+    border: none;
+
+    border-radius: 0;
+
+    min-height: auto;
+}
+
+
+.work-detail-tech-item:hover {
+    transform: translateY(-3px);
+
+    background: transparent;
+
+    border: none;
+}
+
+
+.work-detail-tech-item img {
+    width: 48px;
+
+    height: 48px;
+
+    object-fit: contain;
+}
+
+
+.work-detail-tech-item span {
+    color: var(--text-secondary);
+
+    font-family: 'Manrope Variable', sans-serif;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    text-align: center;
+}
+
+.work-detail-tech-missing-logo {
+    width: 48px;
+
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: var(--text-secondary);
+
+    border: 1px dashed var(--border-color);
+
+    border-radius: 50%;
+
+    font-family: 'Manrope Variable', sans-serif;
+
+    font-size: 18px;
+
+    font-weight: 700;
+}
+
+
+@media (max-width: 600px) {
+
+    .work-detail-technologies {
+        padding: 60px 20px;
+    }
+
+
+    .work-detail-tech-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 12px;
+
+        margin-top: 32px;
+    }
+
+
+    .work-detail-tech-item {
+        min-height: 115px;
+
+        padding: 18px;
+    }
+
+
+    .work-detail-tech-item img {
+        width: 42px;
+
+        height: 42px;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .work-detail-media {
+        padding: 0 20px 60px;
+    }
+
+
+    .work-detail-image {
+        border-radius: 10px;
+    }
+
+}
+/* =========================
+   TECH TAGS
+========================= */
+
+.work-detail-tech {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+}
+
+
+.work-detail-tech span,
+.work-detail-stack-list span {
+    padding: 9px 14px;
+
+    border: 1px solid var(--border-color);
+
+    border-radius: 999px;
+
+    background: var(--bg-secondary);
+
+    color: var(--text-secondary);
+
+    font-family: 'Inter Variable', sans-serif;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   SHARED SECTIONS
+========================= */
+
+.work-detail-section {
+    padding: 95px 24px;
+
+    border-bottom: 1px solid var(--border-color);
+}
+
+
+.work-detail-contribution,
+.work-detail-stack {
+    background: var(--bg-secondary);
+}
+
+
+.work-detail-content {
+    max-width: 1240px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+
+    gap: 90px;
+}
+
+
+.work-detail-section-heading {
+    max-width: 700px;
+
+    margin-bottom: 45px;
+}
+
+
+.work-detail-section-heading h2 {
+    margin: 0;
+
+    font-family: 'Manrope Variable', sans-serif;
+
+    font-size: clamp(30px, 4vw, 46px);
+
+    line-height: 1.15;
+
+    letter-spacing: -0.025em;
+}
+
+
+.work-detail-copy p {
+    margin: 0;
+
+    color: var(--text-secondary);
+
+    font-family: 'Inter Variable', sans-serif;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================
+   FEATURE GRID
+========================= */
+
+.work-detail-feature-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 20px;
+}
+
+
+.work-detail-feature {
+    min-height: 180px;
+
+    padding: 28px;
+
+    border: 1px solid var(--border-color);
+
+    border-radius: 14px;
+
+    background: var(--bg-secondary);
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease;
+}
+
+
+.work-detail-feature:hover {
+    transform: translateY(-4px);
+
+    border-color: rgba(79, 140, 255, 0.45);
+}
+
+
+.work-detail-feature-number {
+    display: block;
+
+    margin-bottom: 42px;
+
+    color: var(--text-secondary);
+
+    font-family: 'Manrope Variable', sans-serif;
+
+    font-size: 13px;
+
+    font-weight: 700;
+}
+
+
+.work-detail-feature p {
+    margin: 0;
+
+    font-family: 'Manrope Variable', sans-serif;
+
+    font-size: 17px;
+
+    font-weight: 600;
+
+    line-height: 1.45;
+}
+
+
+/* =========================
+   STACK
+========================= */
+
+.work-detail-stack-list {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+}
+
+
+/* =========================
+   RELATED SERVICES
+========================= */
+
+.work-detail-service-links {
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    border-top: 1px solid var(--border-color);
+}
+
+
+.work-detail-service-links a {
+    min-height: 78px;
+
+    padding: 22px 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    border-bottom: 1px solid var(--border-color);
+
+    color: var(--text-primary);
+
+    font-family: 'Manrope Variable', sans-serif;
+
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition:
+        background-color 0.2s ease,
+        padding-left 0.2s ease;
+}
+
+
+.work-detail-service-links a:hover {
+    padding-left: 24px;
+
+    background: var(--bg-secondary);
+}
+
+
+/* =========================
+   GITHUB
+========================= */
+
+.work-detail-github {
+    padding: 80px 24px;
+
+    border-bottom: 1px solid var(--border-color);
+}
+
+
+.work-detail-github-container {
+    max-width: 1240px;
+
+    margin: 0 auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 50px;
+}
+
+
+.work-detail-github h2 {
+    margin: 0;
+
+    font-family: 'Manrope Variable', sans-serif;
+
+    font-size: clamp(30px, 4vw, 44px);
+}
+
+
+.work-detail-github p:not(.work-detail-eyebrow) {
+    max-width: 650px;
+
+    margin: 18px 0 0;
+
+    color: var(--text-secondary);
+
+    font-family: 'Inter Variable', sans-serif;
+
+    line-height: 1.7;
+}
+
+
+.work-detail-github-link {
+    flex-shrink: 0;
+
+    padding: 14px 20px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    border: 1px solid var(--border-color);
+
+    border-radius: 10px;
+
+    color: var(--text-primary);
+
+    font-family: 'Manrope Variable', sans-serif;
+
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease;
+}
+
+
+.work-detail-github-link:hover {
+    transform: translateY(-2px);
+
+    border-color: rgba(79, 140, 255, 0.5);
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+    .work-detail-hero {
+        padding: 80px 24px 70px;
+    }
+
+
+    .work-detail-section {
+        padding: 75px 24px;
+    }
+
+
+    .work-detail-content {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+    }
+
+
+    .work-detail-feature-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+
+    .work-detail-github-container {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .work-detail-hero {
+        padding: 60px 20px;
+    }
+
+
+    .work-detail-hero h1 {
+        font-size: 38px;
+    }
+
+
+    .work-detail-summary {
+        font-size: 16px;
+    }
+
+
+    .work-detail-section {
+        padding: 60px 20px;
+    }
+
+
+    .work-detail-feature-grid,
+    .work-detail-service-links {
+        grid-template-columns: 1fr;
+    }
+
+
+    .work-detail-feature {
+        min-height: auto;
+
+        padding: 24px;
+    }
+
+
+    .work-detail-feature-number {
+        margin-bottom: 30px;
+    }
+
+
+    .work-detail-github {
+        padding: 60px 20px;
+    }
+
+
+    .work-detail-github-link {
+        width: 100%;
+
+        justify-content: center;
+    }
+
+}

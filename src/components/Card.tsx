@@ -24,9 +24,20 @@ function Card({
   image,
   imageAlt = '',
   link,
-  linkText = 'Learn More',
+  linkText,
   variant = 'service'
 }: CardProps) {
+
+  const resolvedLinkText =
+    linkText ??
+    (
+      variant === 'project'
+        ? `View ${title}`
+        : variant === 'resource'
+          ? `Read ${title}`
+          : `Explore ${title}`
+    )
+
   return (
     <article className={`content-card content-card--${variant}`}>
 
@@ -68,9 +79,15 @@ function Card({
           <NavLink
             to={link}
             className="content-card__link"
-            aria-label={`${linkText}: ${title}`}
+            aria-label={resolvedLinkText}
           >
-            <span>→</span>
+            <span className="content-card__link-text">
+              {resolvedLinkText}
+            </span>
+
+            <span aria-hidden="true">
+              →
+            </span>
           </NavLink>
         )}
 
