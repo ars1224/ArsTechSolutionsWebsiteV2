@@ -1,10 +1,9 @@
 import '../styles/TechStack.css'
 
 
-type Technology = {
-  name: string
-  logo: string
-}
+import type { Technology } from '../data/technologies'
+
+import '../styles/TechStack.css'
 
 
 type TechStackProps = {
@@ -23,14 +22,24 @@ function TechStack({
     'We choose practical tools based on the needs of each project.'
 }: TechStackProps) {
 
-  if (technologies.length === 0) {
+  const technologiesWithLogos =
+    technologies.filter(
+      (
+        technology
+      ): technology is Technology & {
+        logo: string
+      } => Boolean(technology.logo)
+    )
+
+
+  if (technologiesWithLogos.length === 0) {
     return null
   }
 
 
   const carouselTechnologies = [
-    ...technologies,
-    ...technologies
+    ...technologiesWithLogos,
+    ...technologiesWithLogos
   ]
 
 
@@ -45,11 +54,9 @@ function TechStack({
             {eyebrow}
           </p>
 
-
           <h2>
             {title}
           </h2>
-
 
           <span>
             {description}
@@ -80,7 +87,6 @@ function TechStack({
                   loading="lazy"
                   decoding="async"
                 />
-
 
                 <span>
                   {technology.name}
