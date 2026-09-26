@@ -1,4 +1,4 @@
-import netlifyLogo from '../assets/techstack/netlify.png'
+import netlifyLogo from '../assets/techstack/Netlify.png'
 
 import '../styles/Partners.css'
 

@@ -11,7 +11,7 @@ import '../styles/Footer.css'
 
 import BusinessProfiles from '../components/BusinessProfiles.tsx'
 
-import netlifyLogo from '../assets/techstack/netlify.png'
+import netlifyLogo from '../assets/techstack/Netlify.png'
 
 function Footer() {
   return (
